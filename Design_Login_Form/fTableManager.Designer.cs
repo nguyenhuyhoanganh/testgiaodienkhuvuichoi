@@ -89,9 +89,9 @@
             this.btnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 122;
-            this.btnMenu.Location = new System.Drawing.Point(10, 9);
+            this.btnMenu.Location = new System.Drawing.Point(24, 9);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(179, 122);
+            this.btnMenu.Size = new System.Drawing.Size(171, 122);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMenu.TabIndex = 12;
             this.btnMenu.TabStop = false;

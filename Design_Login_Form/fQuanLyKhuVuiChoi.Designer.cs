@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txbGiaVe_NL = new System.Windows.Forms.TextBox();
-            this.txbTenKhuVuiChoi = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txbGiaVe_TE = new System.Windows.Forms.TextBox();
-            this.txbMaKhu = new System.Windows.Forms.TextBox();
+            this.labelThôngTinKhuVuiChơi = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvKhu = new System.Windows.Forms.DataGridView();
             this.btnTimKiemKhu = new System.Windows.Forms.Button();
             this.btnXoaKhu = new System.Windows.Forms.Button();
             this.btnSuaKhu = new System.Windows.Forms.Button();
             this.btnThemKhu = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgvKhu = new System.Windows.Forms.DataGridView();
-            this.labelThôngTinKhuVuiChơi = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txbGiaVe_TE = new System.Windows.Forms.TextBox();
+            this.txbMaKhu = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txbTenKhuVuiChoi = new System.Windows.Forms.TextBox();
+            this.txbGiaVe_NL = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhu)).BeginInit();
@@ -65,7 +65,7 @@
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.txbTenKhuVuiChoi);
             this.groupBox1.Controls.Add(this.txbGiaVe_NL);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(838, 605);
@@ -73,113 +73,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý Khu Vui Chơi";
             // 
-            // label12
+            // labelThôngTinKhuVuiChơi
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 83);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 19);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Giá vé người lớn:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 29);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(135, 19);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "Tên khu vui chơi:";
-            // 
-            // txbGiaVe_NL
-            // 
-            this.txbGiaVe_NL.Location = new System.Drawing.Point(10, 105);
-            this.txbGiaVe_NL.Name = "txbGiaVe_NL";
-            this.txbGiaVe_NL.Size = new System.Drawing.Size(197, 27);
-            this.txbGiaVe_NL.TabIndex = 35;
-            // 
-            // txbTenKhuVuiChoi
-            // 
-            this.txbTenKhuVuiChoi.Location = new System.Drawing.Point(10, 50);
-            this.txbTenKhuVuiChoi.Name = "txbTenKhuVuiChoi";
-            this.txbTenKhuVuiChoi.Size = new System.Drawing.Size(197, 27);
-            this.txbTenKhuVuiChoi.TabIndex = 34;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(214, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 19);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Mã khu:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(216, 83);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 19);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Giá vé trẻ em:";
-            // 
-            // txbGiaVe_TE
-            // 
-            this.txbGiaVe_TE.Location = new System.Drawing.Point(218, 105);
-            this.txbGiaVe_TE.Name = "txbGiaVe_TE";
-            this.txbGiaVe_TE.Size = new System.Drawing.Size(197, 27);
-            this.txbGiaVe_TE.TabIndex = 39;
-            // 
-            // txbMaKhu
-            // 
-            this.txbMaKhu.Location = new System.Drawing.Point(217, 50);
-            this.txbMaKhu.Name = "txbMaKhu";
-            this.txbMaKhu.Size = new System.Drawing.Size(197, 27);
-            this.txbMaKhu.TabIndex = 38;
-            // 
-            // btnTimKiemKhu
-            // 
-            this.btnTimKiemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnTimKiemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemKhu.Location = new System.Drawing.Point(317, 147);
-            this.btnTimKiemKhu.Name = "btnTimKiemKhu";
-            this.btnTimKiemKhu.Size = new System.Drawing.Size(89, 46);
-            this.btnTimKiemKhu.TabIndex = 45;
-            this.btnTimKiemKhu.Text = "Tìm kiếm";
-            this.btnTimKiemKhu.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaKhu
-            // 
-            this.btnXoaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXoaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaKhu.Location = new System.Drawing.Point(217, 147);
-            this.btnXoaKhu.Name = "btnXoaKhu";
-            this.btnXoaKhu.Size = new System.Drawing.Size(75, 46);
-            this.btnXoaKhu.TabIndex = 44;
-            this.btnXoaKhu.Text = "Xóa";
-            this.btnXoaKhu.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaKhu
-            // 
-            this.btnSuaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnSuaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaKhu.Location = new System.Drawing.Point(117, 147);
-            this.btnSuaKhu.Name = "btnSuaKhu";
-            this.btnSuaKhu.Size = new System.Drawing.Size(75, 46);
-            this.btnSuaKhu.TabIndex = 43;
-            this.btnSuaKhu.Text = "Sửa";
-            this.btnSuaKhu.UseVisualStyleBackColor = false;
-            // 
-            // btnThemKhu
-            // 
-            this.btnThemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemKhu.Location = new System.Drawing.Point(17, 147);
-            this.btnThemKhu.Name = "btnThemKhu";
-            this.btnThemKhu.Size = new System.Drawing.Size(75, 46);
-            this.btnThemKhu.TabIndex = 42;
-            this.btnThemKhu.Text = "Thêm";
-            this.btnThemKhu.UseVisualStyleBackColor = false;
+            this.labelThôngTinKhuVuiChơi.AutoSize = true;
+            this.labelThôngTinKhuVuiChơi.Location = new System.Drawing.Point(6, 201);
+            this.labelThôngTinKhuVuiChơi.Name = "labelThôngTinKhuVuiChơi";
+            this.labelThôngTinKhuVuiChơi.Size = new System.Drawing.Size(183, 19);
+            this.labelThôngTinKhuVuiChơi.TabIndex = 47;
+            this.labelThôngTinKhuVuiChơi.Text = "Thông Tin Khu Vui Chơi";
             // 
             // panel1
             // 
@@ -203,14 +104,113 @@
             this.dtgvKhu.Size = new System.Drawing.Size(812, 357);
             this.dtgvKhu.TabIndex = 35;
             // 
-            // labelThôngTinKhuVuiChơi
+            // btnTimKiemKhu
             // 
-            this.labelThôngTinKhuVuiChơi.AutoSize = true;
-            this.labelThôngTinKhuVuiChơi.Location = new System.Drawing.Point(6, 201);
-            this.labelThôngTinKhuVuiChơi.Name = "labelThôngTinKhuVuiChơi";
-            this.labelThôngTinKhuVuiChơi.Size = new System.Drawing.Size(183, 19);
-            this.labelThôngTinKhuVuiChơi.TabIndex = 47;
-            this.labelThôngTinKhuVuiChơi.Text = "Thông Tin Khu Vui Chơi";
+            this.btnTimKiemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnTimKiemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemKhu.Location = new System.Drawing.Point(530, 147);
+            this.btnTimKiemKhu.Name = "btnTimKiemKhu";
+            this.btnTimKiemKhu.Size = new System.Drawing.Size(89, 46);
+            this.btnTimKiemKhu.TabIndex = 45;
+            this.btnTimKiemKhu.Text = "Tìm kiếm";
+            this.btnTimKiemKhu.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaKhu
+            // 
+            this.btnXoaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXoaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaKhu.Location = new System.Drawing.Point(430, 147);
+            this.btnXoaKhu.Name = "btnXoaKhu";
+            this.btnXoaKhu.Size = new System.Drawing.Size(75, 46);
+            this.btnXoaKhu.TabIndex = 44;
+            this.btnXoaKhu.Text = "Xóa";
+            this.btnXoaKhu.UseVisualStyleBackColor = false;
+            // 
+            // btnSuaKhu
+            // 
+            this.btnSuaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnSuaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaKhu.Location = new System.Drawing.Point(330, 147);
+            this.btnSuaKhu.Name = "btnSuaKhu";
+            this.btnSuaKhu.Size = new System.Drawing.Size(75, 46);
+            this.btnSuaKhu.TabIndex = 43;
+            this.btnSuaKhu.Text = "Sửa";
+            this.btnSuaKhu.UseVisualStyleBackColor = false;
+            // 
+            // btnThemKhu
+            // 
+            this.btnThemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemKhu.Location = new System.Drawing.Point(230, 147);
+            this.btnThemKhu.Name = "btnThemKhu";
+            this.btnThemKhu.Size = new System.Drawing.Size(75, 46);
+            this.btnThemKhu.TabIndex = 42;
+            this.btnThemKhu.Text = "Thêm";
+            this.btnThemKhu.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(419, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 19);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Mã khu:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(417, 83);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(111, 19);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Giá vé trẻ em:";
+            // 
+            // txbGiaVe_TE
+            // 
+            this.txbGiaVe_TE.Location = new System.Drawing.Point(419, 105);
+            this.txbGiaVe_TE.Name = "txbGiaVe_TE";
+            this.txbGiaVe_TE.Size = new System.Drawing.Size(197, 27);
+            this.txbGiaVe_TE.TabIndex = 39;
+            // 
+            // txbMaKhu
+            // 
+            this.txbMaKhu.Location = new System.Drawing.Point(419, 50);
+            this.txbMaKhu.Name = "txbMaKhu";
+            this.txbMaKhu.Size = new System.Drawing.Size(197, 27);
+            this.txbMaKhu.TabIndex = 38;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 19);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Giá vé người lớn:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(10, 29);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(135, 19);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "Tên khu vui chơi:";
+            // 
+            // txbTenKhuVuiChoi
+            // 
+            this.txbTenKhuVuiChoi.Location = new System.Drawing.Point(10, 50);
+            this.txbTenKhuVuiChoi.Name = "txbTenKhuVuiChoi";
+            this.txbTenKhuVuiChoi.Size = new System.Drawing.Size(197, 27);
+            this.txbTenKhuVuiChoi.TabIndex = 34;
+            // 
+            // txbGiaVe_NL
+            // 
+            this.txbGiaVe_NL.Location = new System.Drawing.Point(10, 105);
+            this.txbGiaVe_NL.Name = "txbGiaVe_NL";
+            this.txbGiaVe_NL.Size = new System.Drawing.Size(197, 27);
+            this.txbGiaVe_NL.TabIndex = 35;
             // 
             // fQuanLyKhuVuiChoi
             // 

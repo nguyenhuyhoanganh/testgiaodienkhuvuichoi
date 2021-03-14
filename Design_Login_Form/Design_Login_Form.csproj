@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="fBaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>fBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="fMessageBox.Designer.cs">
       <DependentUpon>fMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyDichVu.Designer.cs">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="fQuanLyKhuVuiChoi.cs">
       <SubType>Form</SubType>
@@ -75,19 +87,61 @@
     <Compile Include="fQuanLyNhanVien.Designer.cs">
       <DependentUpon>fQuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="fQuanLyTroChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyTroChoi.Designer.cs">
+      <DependentUpon>fQuanLyTroChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyVeBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyVeBan.Designer.cs">
+      <DependentUpon>fQuanLyVeBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTableManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fTableManager.Designer.cs">
       <DependentUpon>fTableManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThongKeLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKeLuong.Designer.cs">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongTinHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinHoaDon.Designer.cs">
+      <DependentUpon>fThongTinHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fXuatHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fXuatHoaDon.Designer.cs">
+      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBaoCaoDoanhThu.resx">
+      <DependentUpon>fBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fMessageBox.resx">
       <DependentUpon>fMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyDichVu.resx">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQuanLyKhuVuiChoi.resx">
       <DependentUpon>fQuanLyKhuVuiChoi.cs</DependentUpon>
@@ -95,8 +149,26 @@
     <EmbeddedResource Include="fQuanLyNhanVien.resx">
       <DependentUpon>fQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyTroChoi.resx">
+      <DependentUpon>fQuanLyTroChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyVeBan.resx">
+      <DependentUpon>fQuanLyVeBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fTableManager.resx">
       <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKeLuong.resx">
+      <DependentUpon>fThongKeLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTinHoaDon.resx">
+      <DependentUpon>fThongTinHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTinTaiKhoan.resx">
+      <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fXuatHoaDon.resx">
+      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

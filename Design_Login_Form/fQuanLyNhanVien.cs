@@ -18,10 +18,10 @@ namespace Design_Login_Form
             InitializeComponent();           
         }
 
-        private void fQuanLyNhanVien_Load(object sender, EventArgs e)
+        /*private void fQuanLyNhanVien_Load(object sender, EventArgs e)
         {
             string query = "select * from NHANVIEN";
             dtgvNV.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        }*/
     }
 }

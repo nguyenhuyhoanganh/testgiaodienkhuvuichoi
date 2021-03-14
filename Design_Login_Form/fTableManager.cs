@@ -51,12 +51,13 @@ namespace Design_Login_Form
 
         private struct RBGCollors
         {
-            public static Color color1 = Color.FromArgb(172, 126, 241);//Tím
-            public static Color color2 = Color.FromArgb(249, 118, 176);//Hồng Phấn
-            public static Color color3 = Color.FromArgb(253, 138, 114);//Cam
+            public static Color color1 = Color.FromArgb(253, 138, 114);//Cam
+            public static Color color2 = Color.FromArgb(249, 118, 176);//Hồng Phấn           
+            public static Color color3 = Color.FromArgb(78, 240, 206);//Xanh lá
             public static Color color4 = Color.FromArgb(95, 77, 221);//Xanh Dương Đậm
             public static Color color5 = Color.FromArgb(249, 88, 155);//Hồng
             public static Color color6 = Color.FromArgb(24, 161, 251);//Xanh Dương Nhạt
+            public static Color color7 = Color.FromArgb(172, 126, 241);//Tím
         }
         #region Thêm Màu Bên Trái Btn
         private void addleftBoderBtn(Button A, Color color)
@@ -68,6 +69,7 @@ namespace Design_Login_Form
             leftBoderBtn.BringToFront();//Gọi panel lên khi ấn, hết thì k gọi nữa
         }
         #endregion
+
         #region Thêm Màu Button Đang Mở
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -82,11 +84,15 @@ namespace Design_Login_Form
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;//Căn Chỉnh Text vào Giữa
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;//Căn Chỉnh Hình Ảnh (text_ảnh)
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;//Căn Chỉnh Ảnh Sát Phải Button
-                
-                //Icon Currtnt Child Form
+
+                //Icon Currtnt Form
                 iconCurrentForm.IconChar = currentBtn.IconChar;//Icon của panel Tiller Bả đổi theo Icon của Button
                 iconCurrentForm.IconColor = color;//Đổi màu icon theo luôn
                 lbTitleForm.ForeColor = color;
+                btnMenu.ForeColor = color;
+                btnMinimize.ForeColor = color;
+                btnExit.ForeColor = color;
+                btnSignOut.ForeColor = color;
             }
         }
         private void ActivateSubButton(object senderBtn, Color color)
@@ -96,12 +102,13 @@ namespace Design_Login_Form
                 DisableSubButton();//hủy button hiện tại
                 //Button
                 subBtn = (Button)senderBtn;
-                subBtn.BackColor = Color.FromArgb(34, 30, 40);//Đổi Màu Back Color
+                subBtn.BackColor = Color.FromArgb(34, 34, 34);//Đổi Màu Back Color
                 subBtn.ForeColor = color;//Đổi Màu Chữ Thành Màu Được truyền Vào
             }
         }
 
         #endregion
+
         #region Đóng Hoặc Chuyển Mục Đang Mở
         private void DisableButton()
         {
@@ -113,7 +120,8 @@ namespace Design_Login_Form
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;//text dịch sang trái
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;//(Ảnh-Text)
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;//ảnh dịch sang trái
-                lbTitleForm.ForeColor = Color.FromArgb(78, 184, 206);
+                
+                
             }
         }
         private void DisableSubButton()
@@ -128,11 +136,9 @@ namespace Design_Login_Form
         {
             DisableButton();
             leftBoderBtn.Visible = false;
-            iconCurrentForm.IconChar = IconChar.Home;
-            iconCurrentForm.IconColor = Color.FromArgb(78, 184, 206);
-            lbTitleForm.Text = "Home";
         }
         #endregion
+
         #region Show SubMenu
         private void customizeDesing()
         {
@@ -166,6 +172,8 @@ namespace Design_Login_Form
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
+            lbTitleForm.Text = btnQuanLy.Text;
+
             if (btnQuanLy.ForeColor == RBGCollors.color1)
             {
                 Reset();
@@ -193,20 +201,25 @@ namespace Design_Login_Form
         private void btnDichVu_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnDichVu, RBGCollors.color1);
+            openForm(new fQuanLyDichVu());
         }
 
         private void btnTrochoi_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnTrochoi, RBGCollors.color1);
+            openForm(new fQuanLyTroChoi());
         }
 
         private void btnVe_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnVe, RBGCollors.color1);
+            openForm(new fQuanLyVeBan());
         }
         #endregion
+
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
+            lbTitleForm.Text = btnBaoCao.Text;
             if (btnBaoCao.ForeColor == RBGCollors.color2)
             {
                 Reset();
@@ -222,15 +235,20 @@ namespace Design_Login_Form
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnDoanhThu, RBGCollors.color2);
+            openForm(new fBaoCaoDoanhThu());
         }
 
         private void btnLuong_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnLuong, RBGCollors.color2);
+            openForm(new fThongKeLuong());
         }
         #endregion
+
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            lbTitleForm.Text = btnThanhToan.Text;
+
             if (btnThanhToan.ForeColor == RBGCollors.color3)
             {
                 Reset();
@@ -246,16 +264,19 @@ namespace Design_Login_Form
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnHoaDon, RBGCollors.color3);
+            openForm(new fThongTinHoaDon());
         }
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnXuatHoaDon, RBGCollors.color3);
+            openForm(new fXuatHoaDon());
         }
         #endregion
 
         private void btnHeThong_Click(object sender, EventArgs e)
         {
+            lbTitleForm.Text = btnHeThong.Text;
             if (btnHeThong.ForeColor == RBGCollors.color4)
             {
                 Reset();
@@ -271,8 +292,10 @@ namespace Design_Login_Form
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnThongTinTaiKhoan, RBGCollors.color4);
+            openForm(new fThongTinTaiKhoan());
         }
         #endregion
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
             try { activeForm.Close(); }
@@ -280,7 +303,16 @@ namespace Design_Login_Form
             activeForm.Close();
             hideSubMenu();
             Reset();
+            iconCurrentForm.IconChar = IconChar.Home;
+            iconCurrentForm.IconColor = Color.FromArgb(78, 184, 206);
+            lbTitleForm.Text = "Home";
+            btnMenu.ForeColor = Color.FromArgb(78, 184, 206);
+            btnMinimize.ForeColor = Color.FromArgb(78, 184, 206);
+            btnExit.ForeColor = Color.FromArgb(78, 184, 206);
+            btnSignOut.ForeColor = Color.FromArgb(78, 184, 206);
+            lbTitleForm.ForeColor = Color.FromArgb(78, 184, 206);
         }
+
         #region Thanh Tiêu Đề, Thoát, Thu Nhỏ
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
