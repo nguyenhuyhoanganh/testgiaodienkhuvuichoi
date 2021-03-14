@@ -28,126 +28,186 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox_loaidv_maldv = new System.Windows.Forms.TextBox();
-            this.textBox_loaidv_tenldv = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbQuanLyDichVu = new System.Windows.Forms.GroupBox();
+            this.labelThôngTinDịchVụ = new System.Windows.Forms.Label();
+            this.labelThôngTinLDV = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgvThongTinDichVu = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvThongTinLoaiDichVu = new System.Windows.Forms.DataGridView();
+            this.btnTimKiemDichVu = new System.Windows.Forms.Button();
+            this.btnXoaDichVu = new System.Windows.Forms.Button();
+            this.btnSuaDichVu = new System.Windows.Forms.Button();
+            this.btnThemDichVu = new System.Windows.Forms.Button();
+            this.gbDichVu = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox_dichvu_madv = new System.Windows.Forms.TextBox();
-            this.textBox_dichvu_maldv = new System.Windows.Forms.TextBox();
-            this.textBox_dichvu_dongia = new System.Windows.Forms.TextBox();
-            this.textBox_dichvu_tendv = new System.Windows.Forms.TextBox();
-            this.btnTimKiemNV = new System.Windows.Forms.Button();
-            this.btnXoaNV = new System.Windows.Forms.Button();
-            this.btnSuaNV = new System.Windows.Forms.Button();
-            this.btnThemNV = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgvNV = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelThôngTinLDV = new System.Windows.Forms.Label();
-            this.labelThôngTinDịchVụ = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
+            this.txbMaDichVu = new System.Windows.Forms.TextBox();
+            this.txbMaLoaiDichVu_DV = new System.Windows.Forms.TextBox();
+            this.txbDonGiaDV = new System.Windows.Forms.TextBox();
+            this.txbTenDichVu = new System.Windows.Forms.TextBox();
+            this.gbLoaiDichVu = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txbMaLoaiDichVu = new System.Windows.Forms.TextBox();
+            this.txbTenLoaiDichVu = new System.Windows.Forms.TextBox();
+            this.gbQuanLyDichVu.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinDichVu)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinLoaiDichVu)).BeginInit();
+            this.gbDichVu.SuspendLayout();
+            this.gbLoaiDichVu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbQuanLyDichVu
             // 
-            this.groupBox1.Controls.Add(this.labelThôngTinDịchVụ);
-            this.groupBox1.Controls.Add(this.labelThôngTinLDV);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.btnTimKiemNV);
-            this.groupBox1.Controls.Add(this.btnXoaNV);
-            this.groupBox1.Controls.Add(this.btnSuaNV);
-            this.groupBox1.Controls.Add(this.btnThemNV);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(838, 605);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quản Lý Dịch Vụ";
+            this.gbQuanLyDichVu.Controls.Add(this.labelThôngTinDịchVụ);
+            this.gbQuanLyDichVu.Controls.Add(this.labelThôngTinLDV);
+            this.gbQuanLyDichVu.Controls.Add(this.panel2);
+            this.gbQuanLyDichVu.Controls.Add(this.panel1);
+            this.gbQuanLyDichVu.Controls.Add(this.btnTimKiemDichVu);
+            this.gbQuanLyDichVu.Controls.Add(this.btnXoaDichVu);
+            this.gbQuanLyDichVu.Controls.Add(this.btnSuaDichVu);
+            this.gbQuanLyDichVu.Controls.Add(this.btnThemDichVu);
+            this.gbQuanLyDichVu.Controls.Add(this.gbDichVu);
+            this.gbQuanLyDichVu.Controls.Add(this.gbLoaiDichVu);
+            this.gbQuanLyDichVu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gbQuanLyDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.gbQuanLyDichVu.Location = new System.Drawing.Point(12, 12);
+            this.gbQuanLyDichVu.Name = "gbQuanLyDichVu";
+            this.gbQuanLyDichVu.Size = new System.Drawing.Size(838, 605);
+            this.gbQuanLyDichVu.TabIndex = 0;
+            this.gbQuanLyDichVu.TabStop = false;
+            this.gbQuanLyDichVu.Text = "Quản Lý Dịch Vụ";
             // 
-            // groupBox4
+            // labelThôngTinDịchVụ
             // 
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.textBox_loaidv_maldv);
-            this.groupBox4.Controls.Add(this.textBox_loaidv_tenldv);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.groupBox4.Location = new System.Drawing.Point(6, 21);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(394, 134);
-            this.groupBox4.TabIndex = 46;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Loại dịch vụ";
+            this.labelThôngTinDịchVụ.AutoSize = true;
+            this.labelThôngTinDịchVụ.Location = new System.Drawing.Point(403, 207);
+            this.labelThôngTinDịchVụ.Name = "labelThôngTinDịchVụ";
+            this.labelThôngTinDịchVụ.Size = new System.Drawing.Size(144, 19);
+            this.labelThôngTinDịchVụ.TabIndex = 36;
+            this.labelThôngTinDịchVụ.Text = "Thông Tin Dịch Vụ";
             // 
-            // label20
+            // labelThôngTinLDV
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(121, 77);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 19);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "Mã loại dịch vụ:";
+            this.labelThôngTinLDV.AutoSize = true;
+            this.labelThôngTinLDV.Location = new System.Drawing.Point(11, 207);
+            this.labelThôngTinLDV.Name = "labelThôngTinLDV";
+            this.labelThôngTinLDV.Size = new System.Drawing.Size(180, 19);
+            this.labelThôngTinLDV.TabIndex = 54;
+            this.labelThôngTinLDV.Text = "Thông Tin Loại Dịch Vụ";
             // 
-            // label24
+            // panel2
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(115, 23);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(128, 19);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "Tên loại dịch vụ:";
+            this.panel2.Controls.Add(this.dtgvThongTinDichVu);
+            this.panel2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.panel2.Location = new System.Drawing.Point(406, 233);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(419, 357);
+            this.panel2.TabIndex = 53;
             // 
-            // textBox_loaidv_maldv
+            // dtgvThongTinDichVu
             // 
-            this.textBox_loaidv_maldv.Location = new System.Drawing.Point(118, 99);
-            this.textBox_loaidv_maldv.Name = "textBox_loaidv_maldv";
-            this.textBox_loaidv_maldv.Size = new System.Drawing.Size(197, 27);
-            this.textBox_loaidv_maldv.TabIndex = 35;
+            this.dtgvThongTinDichVu.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dtgvThongTinDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvThongTinDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvThongTinDichVu.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dtgvThongTinDichVu.Location = new System.Drawing.Point(0, 0);
+            this.dtgvThongTinDichVu.Name = "dtgvThongTinDichVu";
+            this.dtgvThongTinDichVu.RowHeadersWidth = 51;
+            this.dtgvThongTinDichVu.RowTemplate.Height = 24;
+            this.dtgvThongTinDichVu.Size = new System.Drawing.Size(419, 357);
+            this.dtgvThongTinDichVu.TabIndex = 35;
             // 
-            // textBox_loaidv_tenldv
+            // panel1
             // 
-            this.textBox_loaidv_tenldv.Location = new System.Drawing.Point(118, 44);
-            this.textBox_loaidv_tenldv.Name = "textBox_loaidv_tenldv";
-            this.textBox_loaidv_tenldv.Size = new System.Drawing.Size(197, 27);
-            this.textBox_loaidv_tenldv.TabIndex = 34;
+            this.panel1.Controls.Add(this.dtgvThongTinLoaiDichVu);
+            this.panel1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.panel1.Location = new System.Drawing.Point(14, 233);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(386, 357);
+            this.panel1.TabIndex = 52;
             // 
-            // groupBox3
+            // dtgvThongTinLoaiDichVu
             // 
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.textBox_dichvu_madv);
-            this.groupBox3.Controls.Add(this.textBox_dichvu_maldv);
-            this.groupBox3.Controls.Add(this.textBox_dichvu_dongia);
-            this.groupBox3.Controls.Add(this.textBox_dichvu_tendv);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.groupBox3.Location = new System.Drawing.Point(406, 21);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(426, 134);
-            this.groupBox3.TabIndex = 47;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Dịch vụ";
+            this.dtgvThongTinLoaiDichVu.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dtgvThongTinLoaiDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvThongTinLoaiDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvThongTinLoaiDichVu.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dtgvThongTinLoaiDichVu.Location = new System.Drawing.Point(0, 0);
+            this.dtgvThongTinLoaiDichVu.Name = "dtgvThongTinLoaiDichVu";
+            this.dtgvThongTinLoaiDichVu.RowHeadersWidth = 51;
+            this.dtgvThongTinLoaiDichVu.RowTemplate.Height = 24;
+            this.dtgvThongTinLoaiDichVu.Size = new System.Drawing.Size(386, 357);
+            this.dtgvThongTinLoaiDichVu.TabIndex = 35;
+            // 
+            // btnTimKiemDichVu
+            // 
+            this.btnTimKiemDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnTimKiemDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemDichVu.Location = new System.Drawing.Point(517, 161);
+            this.btnTimKiemDichVu.Name = "btnTimKiemDichVu";
+            this.btnTimKiemDichVu.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemDichVu.TabIndex = 51;
+            this.btnTimKiemDichVu.Text = "Tìm kiếm";
+            this.btnTimKiemDichVu.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaDichVu
+            // 
+            this.btnXoaDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXoaDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaDichVu.Location = new System.Drawing.Point(417, 161);
+            this.btnXoaDichVu.Name = "btnXoaDichVu";
+            this.btnXoaDichVu.Size = new System.Drawing.Size(75, 33);
+            this.btnXoaDichVu.TabIndex = 50;
+            this.btnXoaDichVu.Text = "Xóa";
+            this.btnXoaDichVu.UseVisualStyleBackColor = false;
+            // 
+            // btnSuaDichVu
+            // 
+            this.btnSuaDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnSuaDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaDichVu.Location = new System.Drawing.Point(317, 161);
+            this.btnSuaDichVu.Name = "btnSuaDichVu";
+            this.btnSuaDichVu.Size = new System.Drawing.Size(75, 33);
+            this.btnSuaDichVu.TabIndex = 49;
+            this.btnSuaDichVu.Text = "Sửa";
+            this.btnSuaDichVu.UseVisualStyleBackColor = false;
+            // 
+            // btnThemDichVu
+            // 
+            this.btnThemDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThemDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemDichVu.Location = new System.Drawing.Point(217, 161);
+            this.btnThemDichVu.Name = "btnThemDichVu";
+            this.btnThemDichVu.Size = new System.Drawing.Size(75, 33);
+            this.btnThemDichVu.TabIndex = 48;
+            this.btnThemDichVu.Text = "Thêm";
+            this.btnThemDichVu.UseVisualStyleBackColor = false;
+            // 
+            // gbDichVu
+            // 
+            this.gbDichVu.Controls.Add(this.label19);
+            this.gbDichVu.Controls.Add(this.label17);
+            this.gbDichVu.Controls.Add(this.label18);
+            this.gbDichVu.Controls.Add(this.label22);
+            this.gbDichVu.Controls.Add(this.label23);
+            this.gbDichVu.Controls.Add(this.txbMaDichVu);
+            this.gbDichVu.Controls.Add(this.txbMaLoaiDichVu_DV);
+            this.gbDichVu.Controls.Add(this.txbDonGiaDV);
+            this.gbDichVu.Controls.Add(this.txbTenDichVu);
+            this.gbDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.gbDichVu.Location = new System.Drawing.Point(406, 21);
+            this.gbDichVu.Name = "gbDichVu";
+            this.gbDichVu.Size = new System.Drawing.Size(426, 134);
+            this.gbDichVu.TabIndex = 47;
+            this.gbDichVu.TabStop = false;
+            this.gbDichVu.Text = "Dịch vụ";
             // 
             // label19
             // 
@@ -193,139 +253,79 @@
             this.label23.TabIndex = 49;
             this.label23.Text = "Mã dịch vụ:";
             // 
-            // textBox_dichvu_madv
+            // txbMaDichVu
             // 
-            this.textBox_dichvu_madv.Location = new System.Drawing.Point(15, 44);
-            this.textBox_dichvu_madv.Name = "textBox_dichvu_madv";
-            this.textBox_dichvu_madv.Size = new System.Drawing.Size(197, 27);
-            this.textBox_dichvu_madv.TabIndex = 48;
+            this.txbMaDichVu.Location = new System.Drawing.Point(15, 44);
+            this.txbMaDichVu.Name = "txbMaDichVu";
+            this.txbMaDichVu.Size = new System.Drawing.Size(197, 27);
+            this.txbMaDichVu.TabIndex = 48;
             // 
-            // textBox_dichvu_maldv
+            // txbMaLoaiDichVu_DV
             // 
-            this.textBox_dichvu_maldv.Location = new System.Drawing.Point(217, 99);
-            this.textBox_dichvu_maldv.Name = "textBox_dichvu_maldv";
-            this.textBox_dichvu_maldv.Size = new System.Drawing.Size(197, 27);
-            this.textBox_dichvu_maldv.TabIndex = 47;
+            this.txbMaLoaiDichVu_DV.Location = new System.Drawing.Point(217, 99);
+            this.txbMaLoaiDichVu_DV.Name = "txbMaLoaiDichVu_DV";
+            this.txbMaLoaiDichVu_DV.Size = new System.Drawing.Size(197, 27);
+            this.txbMaLoaiDichVu_DV.TabIndex = 47;
             // 
-            // textBox_dichvu_dongia
+            // txbDonGiaDV
             // 
-            this.textBox_dichvu_dongia.Location = new System.Drawing.Point(218, 44);
-            this.textBox_dichvu_dongia.Name = "textBox_dichvu_dongia";
-            this.textBox_dichvu_dongia.Size = new System.Drawing.Size(197, 27);
-            this.textBox_dichvu_dongia.TabIndex = 46;
+            this.txbDonGiaDV.Location = new System.Drawing.Point(218, 44);
+            this.txbDonGiaDV.Name = "txbDonGiaDV";
+            this.txbDonGiaDV.Size = new System.Drawing.Size(197, 27);
+            this.txbDonGiaDV.TabIndex = 46;
             // 
-            // textBox_dichvu_tendv
+            // txbTenDichVu
             // 
-            this.textBox_dichvu_tendv.Location = new System.Drawing.Point(15, 99);
-            this.textBox_dichvu_tendv.Name = "textBox_dichvu_tendv";
-            this.textBox_dichvu_tendv.Size = new System.Drawing.Size(197, 27);
-            this.textBox_dichvu_tendv.TabIndex = 45;
+            this.txbTenDichVu.Location = new System.Drawing.Point(15, 99);
+            this.txbTenDichVu.Name = "txbTenDichVu";
+            this.txbTenDichVu.Size = new System.Drawing.Size(197, 27);
+            this.txbTenDichVu.TabIndex = 45;
             // 
-            // btnTimKiemNV
+            // gbLoaiDichVu
             // 
-            this.btnTimKiemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnTimKiemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemNV.Location = new System.Drawing.Point(517, 161);
-            this.btnTimKiemNV.Name = "btnTimKiemNV";
-            this.btnTimKiemNV.Size = new System.Drawing.Size(89, 33);
-            this.btnTimKiemNV.TabIndex = 51;
-            this.btnTimKiemNV.Text = "Tìm kiếm";
-            this.btnTimKiemNV.UseVisualStyleBackColor = false;
+            this.gbLoaiDichVu.Controls.Add(this.label20);
+            this.gbLoaiDichVu.Controls.Add(this.label24);
+            this.gbLoaiDichVu.Controls.Add(this.txbMaLoaiDichVu);
+            this.gbLoaiDichVu.Controls.Add(this.txbTenLoaiDichVu);
+            this.gbLoaiDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.gbLoaiDichVu.Location = new System.Drawing.Point(6, 21);
+            this.gbLoaiDichVu.Name = "gbLoaiDichVu";
+            this.gbLoaiDichVu.Size = new System.Drawing.Size(394, 134);
+            this.gbLoaiDichVu.TabIndex = 46;
+            this.gbLoaiDichVu.TabStop = false;
+            this.gbLoaiDichVu.Text = "Loại dịch vụ";
             // 
-            // btnXoaNV
+            // label20
             // 
-            this.btnXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaNV.Location = new System.Drawing.Point(417, 161);
-            this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(75, 33);
-            this.btnXoaNV.TabIndex = 50;
-            this.btnXoaNV.Text = "Xóa";
-            this.btnXoaNV.UseVisualStyleBackColor = false;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(121, 77);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 19);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Mã loại dịch vụ:";
             // 
-            // btnSuaNV
+            // label24
             // 
-            this.btnSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaNV.Location = new System.Drawing.Point(317, 161);
-            this.btnSuaNV.Name = "btnSuaNV";
-            this.btnSuaNV.Size = new System.Drawing.Size(75, 33);
-            this.btnSuaNV.TabIndex = 49;
-            this.btnSuaNV.Text = "Sửa";
-            this.btnSuaNV.UseVisualStyleBackColor = false;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(115, 23);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(128, 19);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Tên loại dịch vụ:";
             // 
-            // btnThemNV
+            // txbMaLoaiDichVu
             // 
-            this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNV.Location = new System.Drawing.Point(217, 161);
-            this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(75, 33);
-            this.btnThemNV.TabIndex = 48;
-            this.btnThemNV.Text = "Thêm";
-            this.btnThemNV.UseVisualStyleBackColor = false;
+            this.txbMaLoaiDichVu.Location = new System.Drawing.Point(118, 99);
+            this.txbMaLoaiDichVu.Name = "txbMaLoaiDichVu";
+            this.txbMaLoaiDichVu.Size = new System.Drawing.Size(197, 27);
+            this.txbMaLoaiDichVu.TabIndex = 35;
             // 
-            // panel1
+            // txbTenLoaiDichVu
             // 
-            this.panel1.Controls.Add(this.dtgvNV);
-            this.panel1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panel1.Location = new System.Drawing.Point(14, 233);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 357);
-            this.panel1.TabIndex = 52;
-            // 
-            // dtgvNV
-            // 
-            this.dtgvNV.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dtgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvNV.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dtgvNV.Location = new System.Drawing.Point(0, 0);
-            this.dtgvNV.Name = "dtgvNV";
-            this.dtgvNV.RowHeadersWidth = 51;
-            this.dtgvNV.RowTemplate.Height = 24;
-            this.dtgvNV.Size = new System.Drawing.Size(386, 357);
-            this.dtgvNV.TabIndex = 35;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panel2.Location = new System.Drawing.Point(406, 233);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 357);
-            this.panel2.TabIndex = 53;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(419, 357);
-            this.dataGridView1.TabIndex = 35;
-            // 
-            // labelThôngTinLDV
-            // 
-            this.labelThôngTinLDV.AutoSize = true;
-            this.labelThôngTinLDV.Location = new System.Drawing.Point(11, 207);
-            this.labelThôngTinLDV.Name = "labelThôngTinLDV";
-            this.labelThôngTinLDV.Size = new System.Drawing.Size(180, 19);
-            this.labelThôngTinLDV.TabIndex = 54;
-            this.labelThôngTinLDV.Text = "Thông Tin Loại Dịch Vụ";
-            // 
-            // labelThôngTinDịchVụ
-            // 
-            this.labelThôngTinDịchVụ.AutoSize = true;
-            this.labelThôngTinDịchVụ.Location = new System.Drawing.Point(403, 207);
-            this.labelThôngTinDịchVụ.Name = "labelThôngTinDịchVụ";
-            this.labelThôngTinDịchVụ.Size = new System.Drawing.Size(144, 19);
-            this.labelThôngTinDịchVụ.TabIndex = 36;
-            this.labelThôngTinDịchVụ.Text = "Thông Tin Dịch Vụ";
+            this.txbTenLoaiDichVu.Location = new System.Drawing.Point(118, 44);
+            this.txbTenLoaiDichVu.Name = "txbTenLoaiDichVu";
+            this.txbTenLoaiDichVu.Size = new System.Drawing.Size(197, 27);
+            this.txbTenLoaiDichVu.TabIndex = 34;
             // 
             // fQuanLyDichVu
             // 
@@ -333,50 +333,50 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbQuanLyDichVu);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.Name = "fQuanLyDichVu";
             this.Text = "Dịch Vụ";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();
+            this.gbQuanLyDichVu.ResumeLayout(false);
+            this.gbQuanLyDichVu.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinDichVu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinLoaiDichVu)).EndInit();
+            this.gbDichVu.ResumeLayout(false);
+            this.gbDichVu.PerformLayout();
+            this.gbLoaiDichVu.ResumeLayout(false);
+            this.gbLoaiDichVu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbQuanLyDichVu;
+        private System.Windows.Forms.GroupBox gbDichVu;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox_dichvu_madv;
-        private System.Windows.Forms.TextBox textBox_dichvu_maldv;
-        private System.Windows.Forms.TextBox textBox_dichvu_dongia;
-        private System.Windows.Forms.TextBox textBox_dichvu_tendv;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txbMaDichVu;
+        private System.Windows.Forms.TextBox txbMaLoaiDichVu_DV;
+        private System.Windows.Forms.TextBox txbDonGiaDV;
+        private System.Windows.Forms.TextBox txbTenDichVu;
+        private System.Windows.Forms.GroupBox gbLoaiDichVu;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox_loaidv_maldv;
-        private System.Windows.Forms.TextBox textBox_loaidv_tenldv;
-        private System.Windows.Forms.Button btnTimKiemNV;
-        private System.Windows.Forms.Button btnXoaNV;
-        private System.Windows.Forms.Button btnSuaNV;
-        private System.Windows.Forms.Button btnThemNV;
+        private System.Windows.Forms.TextBox txbMaLoaiDichVu;
+        private System.Windows.Forms.TextBox txbTenLoaiDichVu;
+        private System.Windows.Forms.Button btnTimKiemDichVu;
+        private System.Windows.Forms.Button btnXoaDichVu;
+        private System.Windows.Forms.Button btnSuaDichVu;
+        private System.Windows.Forms.Button btnThemDichVu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dtgvNV;
+        private System.Windows.Forms.DataGridView dtgvThongTinLoaiDichVu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvThongTinDichVu;
         private System.Windows.Forms.Label labelThôngTinLDV;
         private System.Windows.Forms.Label labelThôngTinDịchVụ;
     }

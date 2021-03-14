@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbQuanLyNhanVien = new System.Windows.Forms.GroupBox();
+            this.gbThongTinTaiKhoan = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // gbQuanLyNhanVien
+            // gbThongTinTaiKhoan
             // 
-            this.gbQuanLyNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.gbQuanLyNhanVien.Location = new System.Drawing.Point(12, 12);
-            this.gbQuanLyNhanVien.Name = "gbQuanLyNhanVien";
-            this.gbQuanLyNhanVien.Size = new System.Drawing.Size(838, 605);
-            this.gbQuanLyNhanVien.TabIndex = 5;
-            this.gbQuanLyNhanVien.TabStop = false;
-            this.gbQuanLyNhanVien.Text = "Thông Tin Tài Khoản";
+            this.gbThongTinTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.gbThongTinTaiKhoan.Location = new System.Drawing.Point(12, 12);
+            this.gbThongTinTaiKhoan.Name = "gbThongTinTaiKhoan";
+            this.gbThongTinTaiKhoan.Size = new System.Drawing.Size(838, 605);
+            this.gbThongTinTaiKhoan.TabIndex = 5;
+            this.gbThongTinTaiKhoan.TabStop = false;
+            this.gbThongTinTaiKhoan.Text = "Thông Tin Tài Khoản";
             // 
             // fThongTinTaiKhoan
             // 
@@ -47,10 +47,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);
-            this.Controls.Add(this.gbQuanLyNhanVien);
+            this.Controls.Add(this.gbThongTinTaiKhoan);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fThongTinTaiKhoan";
             this.Text = "Thông Tin Tài Khoản";
             this.ResumeLayout(false);
@@ -59,6 +59,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbQuanLyNhanVien;
+        private System.Windows.Forms.GroupBox gbThongTinTaiKhoan;
     }
 }

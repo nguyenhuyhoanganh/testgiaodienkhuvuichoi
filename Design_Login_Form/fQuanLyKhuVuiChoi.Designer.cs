@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbQuanLyKhuVuiChoi = new System.Windows.Forms.GroupBox();
             this.labelThôngTinKhuVuiChơi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvKhu = new System.Windows.Forms.DataGridView();
@@ -44,34 +44,34 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txbTenKhuVuiChoi = new System.Windows.Forms.TextBox();
             this.txbGiaVe_NL = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.gbQuanLyKhuVuiChoi.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhu)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbQuanLyKhuVuiChoi
             // 
-            this.groupBox1.Controls.Add(this.labelThôngTinKhuVuiChơi);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.btnTimKiemKhu);
-            this.groupBox1.Controls.Add(this.btnXoaKhu);
-            this.groupBox1.Controls.Add(this.btnSuaKhu);
-            this.groupBox1.Controls.Add(this.btnThemKhu);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.txbGiaVe_TE);
-            this.groupBox1.Controls.Add(this.txbMaKhu);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.txbTenKhuVuiChoi);
-            this.groupBox1.Controls.Add(this.txbGiaVe_NL);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(838, 605);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quản Lý Khu Vui Chơi";
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.labelThôngTinKhuVuiChơi);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.panel1);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnTimKiemKhu);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnXoaKhu);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnSuaKhu);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnThemKhu);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.label11);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.label15);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.txbGiaVe_TE);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.txbMaKhu);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.label12);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.label16);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.txbTenKhuVuiChoi);
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.txbGiaVe_NL);
+            this.gbQuanLyKhuVuiChoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.gbQuanLyKhuVuiChoi.Location = new System.Drawing.Point(12, 12);
+            this.gbQuanLyKhuVuiChoi.Name = "gbQuanLyKhuVuiChoi";
+            this.gbQuanLyKhuVuiChoi.Size = new System.Drawing.Size(838, 605);
+            this.gbQuanLyKhuVuiChoi.TabIndex = 1;
+            this.gbQuanLyKhuVuiChoi.TabStop = false;
+            this.gbQuanLyKhuVuiChoi.Text = "Quản Lý Khu Vui Chơi";
             // 
             // labelThôngTinKhuVuiChơi
             // 
@@ -218,14 +218,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbQuanLyKhuVuiChoi);
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fQuanLyKhuVuiChoi";
             this.Text = "Khu Vui Chơi";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbQuanLyKhuVuiChoi.ResumeLayout(false);
+            this.gbQuanLyKhuVuiChoi.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhu)).EndInit();
             this.ResumeLayout(false);
@@ -234,7 +234,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbQuanLyKhuVuiChoi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txbTenKhuVuiChoi;
