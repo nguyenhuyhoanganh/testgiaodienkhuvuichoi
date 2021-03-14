@@ -59,7 +59,7 @@ namespace Design_Login_Form
             public static Color color6 = Color.FromArgb(24, 161, 251);//Xanh Dương Nhạt
             public static Color color7 = Color.FromArgb(172, 126, 241);//Tím
         }
-        #region Thêm Màu Bên Trái Btn
+#region Thêm Màu Bên Trái Btn
         private void addleftBoderBtn(Button A, Color color)
         {
             //left border button
@@ -70,7 +70,7 @@ namespace Design_Login_Form
         }
         #endregion
 
-        #region Thêm Màu Button Đang Mở
+#region Thêm Màu Button Đang Mở
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -109,7 +109,7 @@ namespace Design_Login_Form
 
         #endregion
 
-        #region Đóng Hoặc Chuyển Mục Đang Mở
+#region Đóng Hoặc Chuyển Mục Đang Mở
         private void DisableButton()
         {
             if (currentBtn != null)//nếu btn đang ấn chưa đóng 
@@ -139,7 +139,7 @@ namespace Design_Login_Form
         }
         #endregion
 
-        #region Show SubMenu
+#region Show SubMenu
         private void customizeDesing()
         {
             panelQuanLy.Visible = false;
@@ -185,7 +185,7 @@ namespace Design_Login_Form
             showSubMenu(panelQuanLy);
             addleftBoderBtn(btnQuanLy, RBGCollors.color1);
         }
-        #region Quản Lý
+#region Quản Lý
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnNhanVien, RBGCollors.color1);
@@ -231,7 +231,7 @@ namespace Design_Login_Form
             showSubMenu(panelBaoCao);
             addleftBoderBtn(btnBaoCao, RBGCollors.color2);
         }
-        #region Báo Cáo
+#region Báo Cáo
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnDoanhThu, RBGCollors.color2);
@@ -260,7 +260,7 @@ namespace Design_Login_Form
             showSubMenu(panelThanhToan);
             addleftBoderBtn(btnThanhToan, RBGCollors.color3);
         }
-        #region Thanh Toán
+#region Thanh Toán
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnHoaDon, RBGCollors.color3);
@@ -288,7 +288,7 @@ namespace Design_Login_Form
             showSubMenu(panelHeThong);
             addleftBoderBtn(btnHeThong, RBGCollors.color4);
         }
-        #region Hệ Thống
+#region Hệ Thống
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
             ActivateSubButton(btnThongTinTaiKhoan, RBGCollors.color4);
@@ -313,7 +313,7 @@ namespace Design_Login_Form
             lbTitleForm.ForeColor = Color.FromArgb(78, 184, 206);
         }
 
-        #region Thanh Tiêu Đề, Thoát, Thu Nhỏ
+#region Thanh Tiêu Đề, Thoát, Thu Nhỏ
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -333,7 +333,7 @@ namespace Design_Login_Form
             WindowState = FormWindowState.Minimized;
         }
         #endregion
-        #region Đăng Xuất
+#region Đăng Xuất
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             this.Close();

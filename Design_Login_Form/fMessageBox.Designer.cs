@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCheck = new FontAwesome.Sharp.IconButton();
             this.txbMessage = new System.Windows.Forms.TextBox();
+            this.btnCheck = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +43,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 192);
             this.panel1.TabIndex = 0;
+            // 
+            // txbMessage
+            // 
+            this.txbMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbMessage.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.txbMessage.HideSelection = false;
+            this.txbMessage.Location = new System.Drawing.Point(2, 48);
+            this.txbMessage.Multiline = true;
+            this.txbMessage.Name = "txbMessage";
+            this.txbMessage.Size = new System.Drawing.Size(288, 60);
+            this.txbMessage.TabIndex = 3;
+            this.txbMessage.TabStop = false;
+            this.txbMessage.Text = "Message";
+            this.txbMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCheck
             // 
@@ -61,22 +77,8 @@
             this.btnCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCheck.UseVisualStyleBackColor = false;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
-            // 
-            // txbMessage
-            // 
-            this.txbMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbMessage.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.txbMessage.HideSelection = false;
-            this.txbMessage.Location = new System.Drawing.Point(2, 48);
-            this.txbMessage.Multiline = true;
-            this.txbMessage.Name = "txbMessage";
-            this.txbMessage.Size = new System.Drawing.Size(288, 60);
-            this.txbMessage.TabIndex = 3;
-            this.txbMessage.TabStop = false;
-            this.txbMessage.Text = "Message";
-            this.txbMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCheck.MouseLeave += new System.EventHandler(this.btnCheck_MouseLeave);
+            this.btnCheck.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCheck_MouseMove);
             // 
             // fMessageBox
             // 
@@ -87,7 +89,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMessageBox";
