@@ -44,6 +44,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txbTenKhuVuiChoi = new System.Windows.Forms.TextBox();
             this.txbGiaVe_NL = new System.Windows.Forms.TextBox();
+            this.btnXemKhu = new System.Windows.Forms.Button();
             this.gbQuanLyKhuVuiChoi.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhu)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // gbQuanLyKhuVuiChoi
             // 
+            this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnXemKhu);
             this.gbQuanLyKhuVuiChoi.Controls.Add(this.labelThôngTinKhuVuiChơi);
             this.gbQuanLyKhuVuiChoi.Controls.Add(this.panel1);
             this.gbQuanLyKhuVuiChoi.Controls.Add(this.btnTimKiemKhu);
@@ -108,7 +110,7 @@
             // 
             this.btnTimKiemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnTimKiemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemKhu.Location = new System.Drawing.Point(530, 147);
+            this.btnTimKiemKhu.Location = new System.Drawing.Point(583, 147);
             this.btnTimKiemKhu.Name = "btnTimKiemKhu";
             this.btnTimKiemKhu.Size = new System.Drawing.Size(89, 46);
             this.btnTimKiemKhu.TabIndex = 45;
@@ -119,7 +121,7 @@
             // 
             this.btnXoaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnXoaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaKhu.Location = new System.Drawing.Point(430, 147);
+            this.btnXoaKhu.Location = new System.Drawing.Point(483, 147);
             this.btnXoaKhu.Name = "btnXoaKhu";
             this.btnXoaKhu.Size = new System.Drawing.Size(75, 46);
             this.btnXoaKhu.TabIndex = 44;
@@ -130,7 +132,7 @@
             // 
             this.btnSuaKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnSuaKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaKhu.Location = new System.Drawing.Point(330, 147);
+            this.btnSuaKhu.Location = new System.Drawing.Point(383, 147);
             this.btnSuaKhu.Name = "btnSuaKhu";
             this.btnSuaKhu.Size = new System.Drawing.Size(75, 46);
             this.btnSuaKhu.TabIndex = 43;
@@ -141,7 +143,7 @@
             // 
             this.btnThemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnThemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemKhu.Location = new System.Drawing.Point(230, 147);
+            this.btnThemKhu.Location = new System.Drawing.Point(283, 147);
             this.btnThemKhu.Name = "btnThemKhu";
             this.btnThemKhu.Size = new System.Drawing.Size(75, 46);
             this.btnThemKhu.TabIndex = 42;
@@ -212,6 +214,17 @@
             this.txbGiaVe_NL.Size = new System.Drawing.Size(197, 27);
             this.txbGiaVe_NL.TabIndex = 35;
             // 
+            // btnXemKhu
+            // 
+            this.btnXemKhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemKhu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemKhu.Location = new System.Drawing.Point(183, 147);
+            this.btnXemKhu.Name = "btnXemKhu";
+            this.btnXemKhu.Size = new System.Drawing.Size(75, 46);
+            this.btnXemKhu.TabIndex = 48;
+            this.btnXemKhu.Text = "Xem";
+            this.btnXemKhu.UseVisualStyleBackColor = false;
+            // 
             // fQuanLyKhuVuiChoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvKhu;
         private System.Windows.Forms.Label labelThôngTinKhuVuiChơi;
+        private System.Windows.Forms.Button btnXemKhu;
     }
 }

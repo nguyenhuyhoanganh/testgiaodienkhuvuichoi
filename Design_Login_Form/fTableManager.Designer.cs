@@ -48,7 +48,6 @@
             this.btnThongTinTaiKhoan = new System.Windows.Forms.Button();
             this.btnHeThong = new FontAwesome.Sharp.IconButton();
             this.panelThanhToan = new System.Windows.Forms.Panel();
-            this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnThanhToan = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -299,7 +298,6 @@
             // 
             // btnSignOut
             // 
-            this.btnSignOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.btnSignOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
@@ -320,7 +318,7 @@
             this.panelHeThong.Controls.Add(this.btnDangXuat);
             this.panelHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.panelHeThong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeThong.Location = new System.Drawing.Point(0, 860);
+            this.panelHeThong.Location = new System.Drawing.Point(0, 810);
             this.panelHeThong.Name = "panelHeThong";
             this.panelHeThong.Size = new System.Drawing.Size(199, 110);
             this.panelHeThong.TabIndex = 9;
@@ -368,7 +366,7 @@
             this.btnHeThong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHeThong.IconSize = 32;
             this.btnHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHeThong.Location = new System.Drawing.Point(0, 800);
+            this.btnHeThong.Location = new System.Drawing.Point(0, 750);
             this.btnHeThong.Name = "btnHeThong";
             this.btnHeThong.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHeThong.Size = new System.Drawing.Size(199, 60);
@@ -382,29 +380,12 @@
             // panelThanhToan
             // 
             this.panelThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.panelThanhToan.Controls.Add(this.btnXuatHoaDon);
             this.panelThanhToan.Controls.Add(this.btnHoaDon);
             this.panelThanhToan.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelThanhToan.Location = new System.Drawing.Point(0, 690);
             this.panelThanhToan.Name = "panelThanhToan";
-            this.panelThanhToan.Size = new System.Drawing.Size(199, 110);
+            this.panelThanhToan.Size = new System.Drawing.Size(199, 60);
             this.panelThanhToan.TabIndex = 7;
-            // 
-            // btnXuatHoaDon
-            // 
-            this.btnXuatHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXuatHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnXuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuatHoaDon.ForeColor = System.Drawing.Color.LightGray;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(0, 50);
-            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
-            this.btnXuatHoaDon.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnXuatHoaDon.Size = new System.Drawing.Size(199, 50);
-            this.btnXuatHoaDon.TabIndex = 2;
-            this.btnXuatHoaDon.Text = "Xuất Hóa Đơn";
-            this.btnXuatHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatHoaDon.UseVisualStyleBackColor = true;
-            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
             // 
             // btnHoaDon
             // 
@@ -582,7 +563,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton btnHeThong;
         private System.Windows.Forms.Panel panelThanhToan;
-        private System.Windows.Forms.Button btnXuatHoaDon;
         private System.Windows.Forms.Button btnHoaDon;
         private FontAwesome.Sharp.IconButton btnThanhToan;
         private System.Windows.Forms.Panel panelTitleBar;

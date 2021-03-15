@@ -266,12 +266,6 @@ namespace Design_Login_Form
             ActivateSubButton(btnHoaDon, RBGCollors.color3);
             openForm(new fThongTinHoaDon());
         }
-
-        private void btnXuatHoaDon_Click(object sender, EventArgs e)
-        {
-            ActivateSubButton(btnXuatHoaDon, RBGCollors.color3);
-            openForm(new fXuatHoaDon());
-        }
         #endregion
 
         private void btnHeThong_Click(object sender, EventArgs e)

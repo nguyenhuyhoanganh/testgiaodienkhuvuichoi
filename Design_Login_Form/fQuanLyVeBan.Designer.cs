@@ -50,6 +50,7 @@
             this.btnSuaVE = new System.Windows.Forms.Button();
             this.btnThemVE = new System.Windows.Forms.Button();
             this.labelThôngTinVéBán = new System.Windows.Forms.Label();
+            this.btnXemVE = new System.Windows.Forms.Button();
             this.gbQuanLyVeBan.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvVE)).BeginInit();
@@ -57,6 +58,7 @@
             // 
             // gbQuanLyVeBan
             // 
+            this.gbQuanLyVeBan.Controls.Add(this.btnXemVE);
             this.gbQuanLyVeBan.Controls.Add(this.txbNgayBan_VE);
             this.gbQuanLyVeBan.Controls.Add(this.label37);
             this.gbQuanLyVeBan.Controls.Add(this.label33);
@@ -224,7 +226,7 @@
             // 
             this.btnTimKiemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnTimKiemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemVE.Location = new System.Drawing.Point(532, 145);
+            this.btnTimKiemVE.Location = new System.Drawing.Point(582, 145);
             this.btnTimKiemVE.Name = "btnTimKiemVE";
             this.btnTimKiemVE.Size = new System.Drawing.Size(89, 46);
             this.btnTimKiemVE.TabIndex = 34;
@@ -235,7 +237,7 @@
             // 
             this.btnXoaVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnXoaVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaVE.Location = new System.Drawing.Point(432, 145);
+            this.btnXoaVE.Location = new System.Drawing.Point(482, 145);
             this.btnXoaVE.Name = "btnXoaVE";
             this.btnXoaVE.Size = new System.Drawing.Size(75, 46);
             this.btnXoaVE.TabIndex = 33;
@@ -246,7 +248,7 @@
             // 
             this.btnSuaVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnSuaVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaVE.Location = new System.Drawing.Point(332, 145);
+            this.btnSuaVE.Location = new System.Drawing.Point(382, 145);
             this.btnSuaVE.Name = "btnSuaVE";
             this.btnSuaVE.Size = new System.Drawing.Size(75, 46);
             this.btnSuaVE.TabIndex = 32;
@@ -257,7 +259,7 @@
             // 
             this.btnThemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnThemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemVE.Location = new System.Drawing.Point(232, 145);
+            this.btnThemVE.Location = new System.Drawing.Point(282, 145);
             this.btnThemVE.Name = "btnThemVE";
             this.btnThemVE.Size = new System.Drawing.Size(75, 46);
             this.btnThemVE.TabIndex = 31;
@@ -272,6 +274,17 @@
             this.labelThôngTinVéBán.Size = new System.Drawing.Size(139, 19);
             this.labelThôngTinVéBán.TabIndex = 1;
             this.labelThôngTinVéBán.Text = "Thông Tin Vé Bán";
+            // 
+            // btnXemVE
+            // 
+            this.btnXemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemVE.Location = new System.Drawing.Point(182, 145);
+            this.btnXemVE.Name = "btnXemVE";
+            this.btnXemVE.Size = new System.Drawing.Size(75, 46);
+            this.btnXemVE.TabIndex = 36;
+            this.btnXemVE.Text = "Xem";
+            this.btnXemVE.UseVisualStyleBackColor = false;
             // 
             // fQuanLyVeBan
             // 
@@ -317,5 +330,6 @@
         private System.Windows.Forms.TextBox txbTongTien;
         private System.Windows.Forms.DateTimePicker txbNgayBan_VE;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button btnXemVE;
     }
 }

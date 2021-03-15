@@ -37,4 +37,3 @@ C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_L
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fThongKeLuong.resources
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinHoaDon.resources
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinTaiKhoan.resources
-C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fXuatHoaDon.resources

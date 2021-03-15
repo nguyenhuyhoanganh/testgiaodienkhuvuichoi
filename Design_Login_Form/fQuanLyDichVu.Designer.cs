@@ -54,6 +54,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txbMaLoaiDichVu = new System.Windows.Forms.TextBox();
             this.txbTenLoaiDichVu = new System.Windows.Forms.TextBox();
+            this.btnXemDichVu = new System.Windows.Forms.Button();
             this.gbQuanLyDichVu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinDichVu)).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // gbQuanLyDichVu
             // 
+            this.gbQuanLyDichVu.Controls.Add(this.btnXemDichVu);
             this.gbQuanLyDichVu.Controls.Add(this.labelThôngTinDịchVụ);
             this.gbQuanLyDichVu.Controls.Add(this.labelThôngTinLDV);
             this.gbQuanLyDichVu.Controls.Add(this.panel2);
@@ -150,7 +152,7 @@
             // 
             this.btnTimKiemDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnTimKiemDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemDichVu.Location = new System.Drawing.Point(517, 161);
+            this.btnTimKiemDichVu.Location = new System.Drawing.Point(566, 161);
             this.btnTimKiemDichVu.Name = "btnTimKiemDichVu";
             this.btnTimKiemDichVu.Size = new System.Drawing.Size(89, 33);
             this.btnTimKiemDichVu.TabIndex = 51;
@@ -161,7 +163,7 @@
             // 
             this.btnXoaDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnXoaDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaDichVu.Location = new System.Drawing.Point(417, 161);
+            this.btnXoaDichVu.Location = new System.Drawing.Point(466, 161);
             this.btnXoaDichVu.Name = "btnXoaDichVu";
             this.btnXoaDichVu.Size = new System.Drawing.Size(75, 33);
             this.btnXoaDichVu.TabIndex = 50;
@@ -172,7 +174,7 @@
             // 
             this.btnSuaDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnSuaDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaDichVu.Location = new System.Drawing.Point(317, 161);
+            this.btnSuaDichVu.Location = new System.Drawing.Point(366, 161);
             this.btnSuaDichVu.Name = "btnSuaDichVu";
             this.btnSuaDichVu.Size = new System.Drawing.Size(75, 33);
             this.btnSuaDichVu.TabIndex = 49;
@@ -183,7 +185,7 @@
             // 
             this.btnThemDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnThemDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemDichVu.Location = new System.Drawing.Point(217, 161);
+            this.btnThemDichVu.Location = new System.Drawing.Point(266, 161);
             this.btnThemDichVu.Name = "btnThemDichVu";
             this.btnThemDichVu.Size = new System.Drawing.Size(75, 33);
             this.btnThemDichVu.TabIndex = 48;
@@ -327,6 +329,17 @@
             this.txbTenLoaiDichVu.Size = new System.Drawing.Size(197, 27);
             this.txbTenLoaiDichVu.TabIndex = 34;
             // 
+            // btnXemDichVu
+            // 
+            this.btnXemDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemDichVu.Location = new System.Drawing.Point(166, 161);
+            this.btnXemDichVu.Name = "btnXemDichVu";
+            this.btnXemDichVu.Size = new System.Drawing.Size(75, 33);
+            this.btnXemDichVu.TabIndex = 55;
+            this.btnXemDichVu.Text = "Xem";
+            this.btnXemDichVu.UseVisualStyleBackColor = false;
+            // 
             // fQuanLyDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,5 +392,6 @@
         private System.Windows.Forms.DataGridView dtgvThongTinDichVu;
         private System.Windows.Forms.Label labelThôngTinLDV;
         private System.Windows.Forms.Label labelThôngTinDịchVụ;
+        private System.Windows.Forms.Button btnXemDichVu;
     }
 }

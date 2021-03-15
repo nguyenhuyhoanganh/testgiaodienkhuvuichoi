@@ -42,6 +42,7 @@
             this.btnSuaTC = new System.Windows.Forms.Button();
             this.btnThemTC = new System.Windows.Forms.Button();
             this.labelThôngTinTròChơi = new System.Windows.Forms.Label();
+            this.btnXemTC = new System.Windows.Forms.Button();
             this.gbQuanLyTroChoi.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinTroChoi)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             // gbQuanLyTroChoi
             // 
+            this.gbQuanLyTroChoi.Controls.Add(this.btnXemTC);
             this.gbQuanLyTroChoi.Controls.Add(this.label27);
             this.gbQuanLyTroChoi.Controls.Add(this.label31);
             this.gbQuanLyTroChoi.Controls.Add(this.label32);
@@ -72,7 +74,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(580, 44);
+            this.label27.Location = new System.Drawing.Point(575, 45);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(67, 19);
             this.label27.TabIndex = 42;
@@ -81,7 +83,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(319, 44);
+            this.label31.Location = new System.Drawing.Point(314, 45);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(102, 19);
             this.label31.TabIndex = 41;
@@ -90,7 +92,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(75, 44);
+            this.label32.Location = new System.Drawing.Point(70, 45);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(103, 19);
             this.label32.TabIndex = 40;
@@ -98,21 +100,21 @@
             // 
             // txbMaTroChoi
             // 
-            this.txbMaTroChoi.Location = new System.Drawing.Point(323, 65);
+            this.txbMaTroChoi.Location = new System.Drawing.Point(318, 66);
             this.txbMaTroChoi.Name = "txbMaTroChoi";
             this.txbMaTroChoi.Size = new System.Drawing.Size(197, 27);
             this.txbMaTroChoi.TabIndex = 39;
             // 
             // txbMaKhu_TC
             // 
-            this.txbMaKhu_TC.Location = new System.Drawing.Point(584, 66);
+            this.txbMaKhu_TC.Location = new System.Drawing.Point(579, 67);
             this.txbMaKhu_TC.Name = "txbMaKhu_TC";
             this.txbMaKhu_TC.Size = new System.Drawing.Size(197, 27);
             this.txbMaKhu_TC.TabIndex = 38;
             // 
             // txbTenTroChoi
             // 
-            this.txbTenTroChoi.Location = new System.Drawing.Point(75, 65);
+            this.txbTenTroChoi.Location = new System.Drawing.Point(70, 66);
             this.txbTenTroChoi.Name = "txbTenTroChoi";
             this.txbTenTroChoi.Size = new System.Drawing.Size(197, 27);
             this.txbTenTroChoi.TabIndex = 37;
@@ -143,7 +145,7 @@
             // 
             this.btnTimKiemTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnTimKiemTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemTC.Location = new System.Drawing.Point(532, 145);
+            this.btnTimKiemTC.Location = new System.Drawing.Point(570, 145);
             this.btnTimKiemTC.Name = "btnTimKiemTC";
             this.btnTimKiemTC.Size = new System.Drawing.Size(89, 46);
             this.btnTimKiemTC.TabIndex = 34;
@@ -154,7 +156,7 @@
             // 
             this.btnXoaTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnXoaTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTC.Location = new System.Drawing.Point(432, 145);
+            this.btnXoaTC.Location = new System.Drawing.Point(470, 145);
             this.btnXoaTC.Name = "btnXoaTC";
             this.btnXoaTC.Size = new System.Drawing.Size(75, 46);
             this.btnXoaTC.TabIndex = 33;
@@ -165,7 +167,7 @@
             // 
             this.btnSuaTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnSuaTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaTC.Location = new System.Drawing.Point(332, 145);
+            this.btnSuaTC.Location = new System.Drawing.Point(370, 145);
             this.btnSuaTC.Name = "btnSuaTC";
             this.btnSuaTC.Size = new System.Drawing.Size(75, 46);
             this.btnSuaTC.TabIndex = 32;
@@ -176,7 +178,7 @@
             // 
             this.btnThemTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnThemTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemTC.Location = new System.Drawing.Point(232, 145);
+            this.btnThemTC.Location = new System.Drawing.Point(270, 145);
             this.btnThemTC.Name = "btnThemTC";
             this.btnThemTC.Size = new System.Drawing.Size(75, 46);
             this.btnThemTC.TabIndex = 31;
@@ -191,6 +193,17 @@
             this.labelThôngTinTròChơi.Size = new System.Drawing.Size(149, 19);
             this.labelThôngTinTròChơi.TabIndex = 1;
             this.labelThôngTinTròChơi.Text = "Thông Tin Trò Chơi";
+            // 
+            // btnXemTC
+            // 
+            this.btnXemTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemTC.Location = new System.Drawing.Point(170, 145);
+            this.btnXemTC.Name = "btnXemTC";
+            this.btnXemTC.Size = new System.Drawing.Size(75, 46);
+            this.btnXemTC.TabIndex = 36;
+            this.btnXemTC.Text = "Xem";
+            this.btnXemTC.UseVisualStyleBackColor = false;
             // 
             // fQuanLyTroChoi
             // 
@@ -228,5 +241,6 @@
         private System.Windows.Forms.Button btnSuaTC;
         private System.Windows.Forms.Button btnThemTC;
         private System.Windows.Forms.Label labelThôngTinTròChơi;
+        private System.Windows.Forms.Button btnXemTC;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbQuanLyNhanVien = new System.Windows.Forms.GroupBox();
+            this.btnXemNV = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvNV = new System.Windows.Forms.DataGridView();
             this.btnTimKiemNV = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             // 
             // gbQuanLyNhanVien
             // 
+            this.gbQuanLyNhanVien.Controls.Add(this.btnXemNV);
             this.gbQuanLyNhanVien.Controls.Add(this.panel1);
             this.gbQuanLyNhanVien.Controls.Add(this.btnTimKiemNV);
             this.gbQuanLyNhanVien.Controls.Add(this.btnXoaNV);
@@ -96,6 +98,17 @@
             this.gbQuanLyNhanVien.TabStop = false;
             this.gbQuanLyNhanVien.Text = "Quản Lý Nhân Viên";
             // 
+            // btnXemNV
+            // 
+            this.btnXemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemNV.Location = new System.Drawing.Point(78, 145);
+            this.btnXemNV.Name = "btnXemNV";
+            this.btnXemNV.Size = new System.Drawing.Size(75, 46);
+            this.btnXemNV.TabIndex = 37;
+            this.btnXemNV.Text = "Xem";
+            this.btnXemNV.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dtgvNV);
@@ -122,7 +135,7 @@
             // 
             this.btnTimKiemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnTimKiemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemNV.Location = new System.Drawing.Point(431, 145);
+            this.btnTimKiemNV.Location = new System.Drawing.Point(478, 145);
             this.btnTimKiemNV.Name = "btnTimKiemNV";
             this.btnTimKiemNV.Size = new System.Drawing.Size(89, 46);
             this.btnTimKiemNV.TabIndex = 34;
@@ -133,7 +146,7 @@
             // 
             this.btnXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaNV.Location = new System.Drawing.Point(331, 145);
+            this.btnXoaNV.Location = new System.Drawing.Point(378, 145);
             this.btnXoaNV.Name = "btnXoaNV";
             this.btnXoaNV.Size = new System.Drawing.Size(75, 46);
             this.btnXoaNV.TabIndex = 33;
@@ -144,7 +157,7 @@
             // 
             this.btnSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaNV.Location = new System.Drawing.Point(231, 145);
+            this.btnSuaNV.Location = new System.Drawing.Point(278, 145);
             this.btnSuaNV.Name = "btnSuaNV";
             this.btnSuaNV.Size = new System.Drawing.Size(75, 46);
             this.btnSuaNV.TabIndex = 32;
@@ -155,7 +168,7 @@
             // 
             this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNV.Location = new System.Drawing.Point(131, 145);
+            this.btnThemNV.Location = new System.Drawing.Point(178, 145);
             this.btnThemNV.Name = "btnThemNV";
             this.btnThemNV.Size = new System.Drawing.Size(75, 46);
             this.btnThemNV.TabIndex = 31;
@@ -216,7 +229,7 @@
             // 
             this.dtpkNgaySinh_NV.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dtpkNgaySinh_NV.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.dtpkNgaySinh_NV.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgaySinh_NV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkNgaySinh_NV.Location = new System.Drawing.Point(631, 50);
             this.dtpkNgaySinh_NV.Name = "dtpkNgaySinh_NV";
             this.dtpkNgaySinh_NV.Size = new System.Drawing.Size(198, 27);
@@ -397,5 +410,6 @@
         private System.Windows.Forms.Button btnXoaNV;
         private System.Windows.Forms.Button btnSuaNV;
         private System.Windows.Forms.Button btnThemNV;
+        private System.Windows.Forms.Button btnXemNV;
     }
 }

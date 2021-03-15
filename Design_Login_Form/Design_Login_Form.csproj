@@ -123,12 +123,6 @@
     <Compile Include="fThongTinTaiKhoan.Designer.cs">
       <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="fXuatHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fXuatHoaDon.Designer.cs">
-      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fBaoCaoDoanhThu.resx">
@@ -166,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fThongTinTaiKhoan.resx">
       <DependentUpon>fThongTinTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fXuatHoaDon.resx">
-      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
