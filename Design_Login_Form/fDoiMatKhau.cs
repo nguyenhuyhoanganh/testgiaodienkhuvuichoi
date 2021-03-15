@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Design_Login_Form
 {
-    public partial class fThongTinTaiKhoan : Form
+    public partial class fDoiMatKhau : Form
     {
-        public fThongTinTaiKhoan()
+        public fDoiMatKhau()
         {
             InitializeComponent();
         }
 
-        private void btnTimKiemNV_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            fDoiMatKhau doimatkhau = new fDoiMatKhau();
-            doimatkhau.Show();
+            this.Close();
         }
     }
 }

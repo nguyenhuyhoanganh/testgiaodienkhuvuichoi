@@ -57,6 +57,12 @@
     <Compile Include="fBaoCaoDoanhThu.Designer.cs">
       <DependentUpon>fBaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fBaoCaoDoanhThu.resx">
       <DependentUpon>fBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
