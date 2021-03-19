@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.btnTimKiemNV = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,14 +37,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbMatKhau_TK = new System.Windows.Forms.TextBox();
-            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnTimKiemNV);
             this.panel1.Controls.Add(this.label3);
@@ -56,6 +56,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 348);
             this.panel1.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 29;
+            this.btnExit.Location = new System.Drawing.Point(365, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(29, 30);
+            this.btnExit.TabIndex = 37;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnTimKiemNV
             // 
@@ -119,21 +134,6 @@
             this.txbMatKhau_TK.Name = "txbMatKhau_TK";
             this.txbMatKhau_TK.Size = new System.Drawing.Size(198, 27);
             this.txbMatKhau_TK.TabIndex = 5;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 29;
-            this.btnExit.Location = new System.Drawing.Point(365, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(29, 30);
-            this.btnExit.TabIndex = 37;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // fDoiMatKhau
             // 
