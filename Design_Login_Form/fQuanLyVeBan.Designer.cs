@@ -94,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 37);
+            this.label1.Location = new System.Drawing.Point(247, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 75;
@@ -122,6 +122,7 @@
             this.btnXoaVe.TabIndex = 73;
             this.btnXoaVe.Text = "Xóa";
             this.btnXoaVe.UseVisualStyleBackColor = false;
+            this.btnXoaVe.Click += new System.EventHandler(this.btnXoaVe_Click);
             // 
             // btnSuaVe
             // 
@@ -133,6 +134,7 @@
             this.btnSuaVe.TabIndex = 72;
             this.btnSuaVe.Text = "Sửa";
             this.btnSuaVe.UseVisualStyleBackColor = false;
+            this.btnSuaVe.Click += new System.EventHandler(this.btnSuaVe_Click);
             // 
             // btnThemVe
             // 
@@ -144,6 +146,7 @@
             this.btnThemVe.TabIndex = 71;
             this.btnThemVe.Text = "Thêm";
             this.btnThemVe.UseVisualStyleBackColor = false;
+            this.btnThemVe.Click += new System.EventHandler(this.btnThemVe_Click);
             // 
             // txbTimKiem
             // 
@@ -162,6 +165,7 @@
             this.btnTimKiemVe.TabIndex = 67;
             this.btnTimKiemVe.Text = "Tìm kiếm";
             this.btnTimKiemVe.UseVisualStyleBackColor = false;
+            this.btnTimKiemVe.Click += new System.EventHandler(this.btnTimKiemVe_Click);
             // 
             // txbNgayBan_VE
             // 
