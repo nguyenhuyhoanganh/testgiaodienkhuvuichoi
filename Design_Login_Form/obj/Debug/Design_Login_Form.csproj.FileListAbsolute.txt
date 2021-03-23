@@ -38,3 +38,27 @@ C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_L
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinHoaDon.resources
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinTaiKhoan.resources
 C:\Users\huyho\OneDrive\Desktop\tesgiaodien\Design_Login_Form\obj\Debug\Design_Login_Form.fDoiMatKhau.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.exe.config
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.exe
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.pdb
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\FontAwesome.Sharp.dll
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csprojAssemblyReference.cache
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fBaoCaoDoanhThu.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fDoiMatKhau.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fLogin.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fMessageBox.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyDichVu.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyKhuVuiChoi.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyNhanVien.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyTroChoi.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyVeBan.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fTableManager.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongKeLuong.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinHoaDon.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinTaiKhoan.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.Properties.Resources.resources
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.GenerateResource.cache
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.CoreCompileInputs.cache
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.CopyComplete
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.exe
+D:\Kì 2 năm 3\Thực tập CSDL\Application\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.pdb

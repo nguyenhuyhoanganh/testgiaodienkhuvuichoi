@@ -26,7 +26,8 @@ namespace Design_Login_Form.DAO
 
         private DataProvider() { }
 
-        private string connectionString = @"Data Source=LAPTOP-9PE5ABV1\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
+        //private string connectionString = @"Data Source=LAPTOP-9PE5ABV1\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
+        private string connectionString = @"Data Source=localhost;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
 
         #region ExcuteQuery
         public DataTable ExecuteQuery(string query, object[] parameter = null)
