@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.gbBaoCaoDoanhThu = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbTongDoanhThu = new System.Windows.Forms.TextBox();
+            this.dtpkNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dtpkNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.btnThongKeDT = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvDoanhThu = new System.Windows.Forms.DataGridView();
             this.labelThôngTinNhânViên = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.btnThongKeDT = new System.Windows.Forms.Button();
-            this.dtpkNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.dtpkNgayKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.txbTongDoanhThu = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbBaoCaoDoanhThu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoanhThu)).BeginInit();
@@ -62,6 +62,72 @@
             this.gbBaoCaoDoanhThu.TabIndex = 2;
             this.gbBaoCaoDoanhThu.TabStop = false;
             this.gbBaoCaoDoanhThu.Text = "Báo Cáo Doanh Thu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(546, 545);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Tổng:";
+            // 
+            // txbTongDoanhThu
+            // 
+            this.txbTongDoanhThu.Location = new System.Drawing.Point(597, 541);
+            this.txbTongDoanhThu.Name = "txbTongDoanhThu";
+            this.txbTongDoanhThu.Size = new System.Drawing.Size(197, 23);
+            this.txbTongDoanhThu.TabIndex = 53;
+            // 
+            // dtpkNgayKetThuc
+            // 
+            this.dtpkNgayKetThuc.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpkNgayKetThuc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.dtpkNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgayKetThuc.Location = new System.Drawing.Point(341, 70);
+            this.dtpkNgayKetThuc.Name = "dtpkNgayKetThuc";
+            this.dtpkNgayKetThuc.Size = new System.Drawing.Size(198, 23);
+            this.dtpkNgayKetThuc.TabIndex = 52;
+            // 
+            // dtpkNgayBatDau
+            // 
+            this.dtpkNgayBatDau.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpkNgayBatDau.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.dtpkNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgayBatDau.Location = new System.Drawing.Point(97, 70);
+            this.dtpkNgayBatDau.Name = "dtpkNgayBatDau";
+            this.dtpkNgayBatDau.Size = new System.Drawing.Size(198, 23);
+            this.dtpkNgayBatDau.TabIndex = 51;
+            // 
+            // btnThongKeDT
+            // 
+            this.btnThongKeDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThongKeDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeDT.Location = new System.Drawing.Point(610, 51);
+            this.btnThongKeDT.Name = "btnThongKeDT";
+            this.btnThongKeDT.Size = new System.Drawing.Size(119, 46);
+            this.btnThongKeDT.TabIndex = 48;
+            this.btnThongKeDT.Text = "Thống Kê";
+            this.btnThongKeDT.UseVisualStyleBackColor = false;
+            this.btnThongKeDT.Click += new System.EventHandler(this.btnThongKeDT_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(337, 50);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(105, 16);
+            this.label31.TabIndex = 47;
+            this.label31.Text = "Ngày Kết Thúc:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(93, 50);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(99, 16);
+            this.label32.TabIndex = 46;
+            this.label32.Text = "Ngày Bắt Đầu:";
             // 
             // panel1
             // 
@@ -90,78 +156,13 @@
             this.labelThôngTinNhânViên.AutoSize = true;
             this.labelThôngTinNhânViên.Location = new System.Drawing.Point(6, 127);
             this.labelThôngTinNhânViên.Name = "labelThôngTinNhânViên";
-            this.labelThôngTinNhânViên.Size = new System.Drawing.Size(89, 19);
+            this.labelThôngTinNhânViên.Size = new System.Drawing.Size(79, 16);
             this.labelThôngTinNhânViên.TabIndex = 37;
             this.labelThôngTinNhânViên.Text = "Doanh Thu";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(337, 50);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(122, 19);
-            this.label31.TabIndex = 47;
-            this.label31.Text = "Ngày Kết Thúc:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(93, 50);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(116, 19);
-            this.label32.TabIndex = 46;
-            this.label32.Text = "Ngày Bắt Đầu:";
-            // 
-            // btnThongKeDT
-            // 
-            this.btnThongKeDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThongKeDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeDT.Location = new System.Drawing.Point(610, 51);
-            this.btnThongKeDT.Name = "btnThongKeDT";
-            this.btnThongKeDT.Size = new System.Drawing.Size(119, 46);
-            this.btnThongKeDT.TabIndex = 48;
-            this.btnThongKeDT.Text = "Thống Kê";
-            this.btnThongKeDT.UseVisualStyleBackColor = false;
-            // 
-            // dtpkNgayBatDau
-            // 
-            this.dtpkNgayBatDau.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpkNgayBatDau.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.dtpkNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkNgayBatDau.Location = new System.Drawing.Point(97, 70);
-            this.dtpkNgayBatDau.Name = "dtpkNgayBatDau";
-            this.dtpkNgayBatDau.Size = new System.Drawing.Size(198, 27);
-            this.dtpkNgayBatDau.TabIndex = 51;
-            // 
-            // dtpkNgayKetThuc
-            // 
-            this.dtpkNgayKetThuc.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpkNgayKetThuc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.dtpkNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkNgayKetThuc.Location = new System.Drawing.Point(341, 70);
-            this.dtpkNgayKetThuc.Name = "dtpkNgayKetThuc";
-            this.dtpkNgayKetThuc.Size = new System.Drawing.Size(198, 27);
-            this.dtpkNgayKetThuc.TabIndex = 52;
-            // 
-            // txbTongDoanhThu
-            // 
-            this.txbTongDoanhThu.Location = new System.Drawing.Point(597, 541);
-            this.txbTongDoanhThu.Name = "txbTongDoanhThu";
-            this.txbTongDoanhThu.Size = new System.Drawing.Size(197, 27);
-            this.txbTongDoanhThu.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(546, 545);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 19);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Tổng:";
-            // 
             // fBaoCaoDoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);

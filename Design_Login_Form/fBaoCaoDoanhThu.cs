@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Design_Login_Form.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace Design_Login_Form
         public fBaoCaoDoanhThu()
         {
             InitializeComponent();
+        }
+
+        private void btnThongKeDT_Click(object sender, EventArgs e)
+        {
+            fMessageBox fm = new fMessageBox();
+            if (dtpkNgayBatDau.Value>dtpkNgayKetThuc.Value)
+            {
+                fm.message = "Ngày bắt đầu không được lớn hơn";
+                fm.ShowDialog();
+            }
+            else
+            {
+                try
+                {
+                    string que = "";
+                    dtgvDoanhThu.DataSource = DataProvider.Instance.ExecuteQuery(que);
+                }catch(Exception ex)
+                {
+                    fm.message = ex.ToString();
+                }
+            }
         }
     }
 }
