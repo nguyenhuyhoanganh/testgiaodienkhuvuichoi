@@ -45,12 +45,14 @@
             this.txbSoNL = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvVE = new System.Windows.Forms.DataGridView();
-            this.btnTimKiemVE = new System.Windows.Forms.Button();
-            this.btnXoaVE = new System.Windows.Forms.Button();
-            this.btnSuaVE = new System.Windows.Forms.Button();
-            this.btnThemVE = new System.Windows.Forms.Button();
             this.labelThôngTinVéBán = new System.Windows.Forms.Label();
-            this.btnXemVE = new System.Windows.Forms.Button();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiemVe = new System.Windows.Forms.Button();
+            this.btnXemVe = new System.Windows.Forms.Button();
+            this.btnXoaVe = new System.Windows.Forms.Button();
+            this.btnSuaVe = new System.Windows.Forms.Button();
+            this.btnThemVe = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbQuanLyVeBan.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvVE)).BeginInit();
@@ -58,7 +60,13 @@
             // 
             // gbQuanLyVeBan
             // 
-            this.gbQuanLyVeBan.Controls.Add(this.btnXemVE);
+            this.gbQuanLyVeBan.Controls.Add(this.label1);
+            this.gbQuanLyVeBan.Controls.Add(this.btnXemVe);
+            this.gbQuanLyVeBan.Controls.Add(this.btnXoaVe);
+            this.gbQuanLyVeBan.Controls.Add(this.btnSuaVe);
+            this.gbQuanLyVeBan.Controls.Add(this.btnThemVe);
+            this.gbQuanLyVeBan.Controls.Add(this.txbTimKiem);
+            this.gbQuanLyVeBan.Controls.Add(this.btnTimKiemVe);
             this.gbQuanLyVeBan.Controls.Add(this.txbNgayBan_VE);
             this.gbQuanLyVeBan.Controls.Add(this.label37);
             this.gbQuanLyVeBan.Controls.Add(this.label33);
@@ -74,10 +82,6 @@
             this.gbQuanLyVeBan.Controls.Add(this.txbSoTE);
             this.gbQuanLyVeBan.Controls.Add(this.txbSoNL);
             this.gbQuanLyVeBan.Controls.Add(this.panel1);
-            this.gbQuanLyVeBan.Controls.Add(this.btnTimKiemVE);
-            this.gbQuanLyVeBan.Controls.Add(this.btnXoaVE);
-            this.gbQuanLyVeBan.Controls.Add(this.btnSuaVE);
-            this.gbQuanLyVeBan.Controls.Add(this.btnThemVE);
             this.gbQuanLyVeBan.Controls.Add(this.labelThôngTinVéBán);
             this.gbQuanLyVeBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.gbQuanLyVeBan.Location = new System.Drawing.Point(12, 12);
@@ -90,7 +94,7 @@
             // txbNgayBan_VE
             // 
             this.txbNgayBan_VE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txbNgayBan_VE.Location = new System.Drawing.Point(630, 50);
+            this.txbNgayBan_VE.Location = new System.Drawing.Point(630, 115);
             this.txbNgayBan_VE.Name = "txbNgayBan_VE";
             this.txbNgayBan_VE.Size = new System.Drawing.Size(200, 27);
             this.txbNgayBan_VE.TabIndex = 50;
@@ -98,7 +102,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(626, 29);
+            this.label37.Location = new System.Drawing.Point(626, 94);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(84, 19);
             this.label37.TabIndex = 49;
@@ -107,7 +111,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(425, 27);
+            this.label33.Location = new System.Drawing.Point(425, 92);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(57, 19);
             this.label33.TabIndex = 48;
@@ -116,7 +120,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(420, 80);
+            this.label34.Location = new System.Drawing.Point(420, 145);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(81, 19);
             this.label34.TabIndex = 47;
@@ -124,14 +128,14 @@
             // 
             // txbMaVe
             // 
-            this.txbMaVe.Location = new System.Drawing.Point(424, 50);
+            this.txbMaVe.Location = new System.Drawing.Point(424, 115);
             this.txbMaVe.Name = "txbMaVe";
             this.txbMaVe.Size = new System.Drawing.Size(197, 27);
             this.txbMaVe.TabIndex = 46;
             // 
             // txbTongTien
             // 
-            this.txbTongTien.Location = new System.Drawing.Point(424, 102);
+            this.txbTongTien.Location = new System.Drawing.Point(424, 167);
             this.txbTongTien.Name = "txbTongTien";
             this.txbTongTien.Size = new System.Drawing.Size(197, 27);
             this.txbTongTien.TabIndex = 45;
@@ -139,7 +143,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(213, 80);
+            this.label35.Location = new System.Drawing.Point(213, 145);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(67, 19);
             this.label35.TabIndex = 44;
@@ -148,7 +152,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(213, 29);
+            this.label39.Location = new System.Drawing.Point(213, 94);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(111, 19);
             this.label39.TabIndex = 43;
@@ -156,14 +160,14 @@
             // 
             // txbMaNV_VE
             // 
-            this.txbMaNV_VE.Location = new System.Drawing.Point(217, 50);
+            this.txbMaNV_VE.Location = new System.Drawing.Point(217, 115);
             this.txbMaNV_VE.Name = "txbMaNV_VE";
             this.txbMaNV_VE.Size = new System.Drawing.Size(197, 27);
             this.txbMaNV_VE.TabIndex = 42;
             // 
             // txbMaKhu_VE
             // 
-            this.txbMaKhu_VE.Location = new System.Drawing.Point(217, 102);
+            this.txbMaKhu_VE.Location = new System.Drawing.Point(217, 167);
             this.txbMaKhu_VE.Name = "txbMaKhu_VE";
             this.txbMaKhu_VE.Size = new System.Drawing.Size(197, 27);
             this.txbMaKhu_VE.TabIndex = 41;
@@ -171,7 +175,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(10, 80);
+            this.label36.Location = new System.Drawing.Point(10, 141);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(85, 19);
             this.label36.TabIndex = 40;
@@ -180,7 +184,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(10, 29);
+            this.label40.Location = new System.Drawing.Point(10, 94);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(111, 19);
             this.label40.TabIndex = 39;
@@ -188,14 +192,14 @@
             // 
             // txbSoTE
             // 
-            this.txbSoTE.Location = new System.Drawing.Point(10, 102);
+            this.txbSoTE.Location = new System.Drawing.Point(10, 167);
             this.txbSoTE.Name = "txbSoTE";
             this.txbSoTE.Size = new System.Drawing.Size(197, 27);
             this.txbSoTE.TabIndex = 38;
             // 
             // txbSoNL
             // 
-            this.txbSoNL.Location = new System.Drawing.Point(10, 50);
+            this.txbSoNL.Location = new System.Drawing.Point(10, 115);
             this.txbSoNL.Name = "txbSoNL";
             this.txbSoNL.Size = new System.Drawing.Size(197, 27);
             this.txbSoNL.TabIndex = 37;
@@ -204,9 +208,9 @@
             // 
             this.panel1.Controls.Add(this.dtgvVE);
             this.panel1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panel1.Location = new System.Drawing.Point(14, 233);
+            this.panel1.Location = new System.Drawing.Point(14, 290);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 357);
+            this.panel1.Size = new System.Drawing.Size(812, 300);
             this.panel1.TabIndex = 36;
             // 
             // dtgvVE
@@ -219,72 +223,88 @@
             this.dtgvVE.Name = "dtgvVE";
             this.dtgvVE.RowHeadersWidth = 51;
             this.dtgvVE.RowTemplate.Height = 24;
-            this.dtgvVE.Size = new System.Drawing.Size(812, 357);
+            this.dtgvVE.Size = new System.Drawing.Size(812, 300);
             this.dtgvVE.TabIndex = 35;
-            // 
-            // btnTimKiemVE
-            // 
-            this.btnTimKiemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnTimKiemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemVE.Location = new System.Drawing.Point(582, 145);
-            this.btnTimKiemVE.Name = "btnTimKiemVE";
-            this.btnTimKiemVE.Size = new System.Drawing.Size(89, 46);
-            this.btnTimKiemVE.TabIndex = 34;
-            this.btnTimKiemVE.Text = "Tìm kiếm";
-            this.btnTimKiemVE.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaVE
-            // 
-            this.btnXoaVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXoaVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaVE.Location = new System.Drawing.Point(482, 145);
-            this.btnXoaVE.Name = "btnXoaVE";
-            this.btnXoaVE.Size = new System.Drawing.Size(75, 46);
-            this.btnXoaVE.TabIndex = 33;
-            this.btnXoaVE.Text = "Xóa";
-            this.btnXoaVE.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaVE
-            // 
-            this.btnSuaVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnSuaVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaVE.Location = new System.Drawing.Point(382, 145);
-            this.btnSuaVE.Name = "btnSuaVE";
-            this.btnSuaVE.Size = new System.Drawing.Size(75, 46);
-            this.btnSuaVE.TabIndex = 32;
-            this.btnSuaVE.Text = "Sửa";
-            this.btnSuaVE.UseVisualStyleBackColor = false;
-            // 
-            // btnThemVE
-            // 
-            this.btnThemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemVE.Location = new System.Drawing.Point(282, 145);
-            this.btnThemVE.Name = "btnThemVE";
-            this.btnThemVE.Size = new System.Drawing.Size(75, 46);
-            this.btnThemVE.TabIndex = 31;
-            this.btnThemVE.Text = "Thêm";
-            this.btnThemVE.UseVisualStyleBackColor = false;
             // 
             // labelThôngTinVéBán
             // 
             this.labelThôngTinVéBán.AutoSize = true;
-            this.labelThôngTinVéBán.Location = new System.Drawing.Point(6, 201);
+            this.labelThôngTinVéBán.Location = new System.Drawing.Point(10, 260);
             this.labelThôngTinVéBán.Name = "labelThôngTinVéBán";
             this.labelThôngTinVéBán.Size = new System.Drawing.Size(139, 19);
             this.labelThôngTinVéBán.TabIndex = 1;
             this.labelThôngTinVéBán.Text = "Thông Tin Vé Bán";
             // 
-            // btnXemVE
+            // txbTimKiem
             // 
-            this.btnXemVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXemVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemVE.Location = new System.Drawing.Point(182, 145);
-            this.btnXemVE.Name = "btnXemVE";
-            this.btnXemVE.Size = new System.Drawing.Size(75, 46);
-            this.btnXemVE.TabIndex = 36;
-            this.btnXemVE.Text = "Xem";
-            this.btnXemVE.UseVisualStyleBackColor = false;
+            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
+            this.txbTimKiem.TabIndex = 68;
+            // 
+            // btnTimKiemVe
+            // 
+            this.btnTimKiemVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnTimKiemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemVe.Location = new System.Drawing.Point(532, 30);
+            this.btnTimKiemVe.Name = "btnTimKiemVe";
+            this.btnTimKiemVe.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemVe.TabIndex = 67;
+            this.btnTimKiemVe.Text = "Tìm kiếm";
+            this.btnTimKiemVe.UseVisualStyleBackColor = false;
+            // 
+            // btnXemVe
+            // 
+            this.btnXemVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemVe.Location = new System.Drawing.Point(231, 215);
+            this.btnXemVe.Name = "btnXemVe";
+            this.btnXemVe.Size = new System.Drawing.Size(75, 33);
+            this.btnXemVe.TabIndex = 74;
+            this.btnXemVe.Text = "Xem";
+            this.btnXemVe.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaVe
+            // 
+            this.btnXoaVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXoaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaVe.Location = new System.Drawing.Point(531, 215);
+            this.btnXoaVe.Name = "btnXoaVe";
+            this.btnXoaVe.Size = new System.Drawing.Size(75, 33);
+            this.btnXoaVe.TabIndex = 73;
+            this.btnXoaVe.Text = "Xóa";
+            this.btnXoaVe.UseVisualStyleBackColor = false;
+            // 
+            // btnSuaVe
+            // 
+            this.btnSuaVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnSuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaVe.Location = new System.Drawing.Point(431, 215);
+            this.btnSuaVe.Name = "btnSuaVe";
+            this.btnSuaVe.Size = new System.Drawing.Size(75, 33);
+            this.btnSuaVe.TabIndex = 72;
+            this.btnSuaVe.Text = "Sửa";
+            this.btnSuaVe.UseVisualStyleBackColor = false;
+            // 
+            // btnThemVe
+            // 
+            this.btnThemVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemVe.Location = new System.Drawing.Point(331, 215);
+            this.btnThemVe.Name = "btnThemVe";
+            this.btnThemVe.Size = new System.Drawing.Size(75, 33);
+            this.btnThemVe.TabIndex = 71;
+            this.btnThemVe.Text = "Thêm";
+            this.btnThemVe.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(241, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 19);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Theo Mã:";
             // 
             // fQuanLyVeBan
             // 
@@ -315,10 +335,6 @@
         private System.Windows.Forms.TextBox txbSoNL;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvVE;
-        private System.Windows.Forms.Button btnTimKiemVE;
-        private System.Windows.Forms.Button btnXoaVE;
-        private System.Windows.Forms.Button btnSuaVE;
-        private System.Windows.Forms.Button btnThemVE;
         private System.Windows.Forms.Label labelThôngTinVéBán;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label39;
@@ -330,6 +346,12 @@
         private System.Windows.Forms.TextBox txbTongTien;
         private System.Windows.Forms.DateTimePicker txbNgayBan_VE;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button btnXemVE;
+        private System.Windows.Forms.TextBox txbTimKiem;
+        private System.Windows.Forms.Button btnTimKiemVe;
+        private System.Windows.Forms.Button btnXemVe;
+        private System.Windows.Forms.Button btnXoaVe;
+        private System.Windows.Forms.Button btnSuaVe;
+        private System.Windows.Forms.Button btnThemVe;
+        private System.Windows.Forms.Label label1;
     }
 }

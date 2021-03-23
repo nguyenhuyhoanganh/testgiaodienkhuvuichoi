@@ -57,6 +57,7 @@
             this.iconCurrentForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.btnLoaiDichVu = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.panelQuanLy.SuspendLayout();
@@ -121,6 +122,7 @@
             // panelQuanLy
             // 
             this.panelQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.panelQuanLy.Controls.Add(this.btnLoaiDichVu);
             this.panelQuanLy.Controls.Add(this.btnVe);
             this.panelQuanLy.Controls.Add(this.btnTrochoi);
             this.panelQuanLy.Controls.Add(this.btnDichVu);
@@ -129,7 +131,7 @@
             this.panelQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuanLy.Location = new System.Drawing.Point(0, 200);
             this.panelQuanLy.Name = "panelQuanLy";
-            this.panelQuanLy.Size = new System.Drawing.Size(199, 260);
+            this.panelQuanLy.Size = new System.Drawing.Size(199, 310);
             this.panelQuanLy.TabIndex = 3;
             // 
             // btnVe
@@ -223,7 +225,7 @@
             this.btnBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBaoCao.IconSize = 32;
             this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoCao.Location = new System.Drawing.Point(0, 460);
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 510);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnBaoCao.Size = new System.Drawing.Size(199, 60);
@@ -240,7 +242,7 @@
             this.panelBaoCao.Controls.Add(this.btnLuong);
             this.panelBaoCao.Controls.Add(this.btnDoanhThu);
             this.panelBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBaoCao.Location = new System.Drawing.Point(0, 520);
+            this.panelBaoCao.Location = new System.Drawing.Point(0, 570);
             this.panelBaoCao.Name = "panelBaoCao";
             this.panelBaoCao.Size = new System.Drawing.Size(199, 110);
             this.panelBaoCao.TabIndex = 5;
@@ -318,7 +320,7 @@
             this.panelHeThong.Controls.Add(this.btnDangXuat);
             this.panelHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.panelHeThong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeThong.Location = new System.Drawing.Point(0, 810);
+            this.panelHeThong.Location = new System.Drawing.Point(0, 860);
             this.panelHeThong.Name = "panelHeThong";
             this.panelHeThong.Size = new System.Drawing.Size(199, 110);
             this.panelHeThong.TabIndex = 9;
@@ -366,7 +368,7 @@
             this.btnHeThong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHeThong.IconSize = 32;
             this.btnHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHeThong.Location = new System.Drawing.Point(0, 750);
+            this.btnHeThong.Location = new System.Drawing.Point(0, 800);
             this.btnHeThong.Name = "btnHeThong";
             this.btnHeThong.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHeThong.Size = new System.Drawing.Size(199, 60);
@@ -382,7 +384,7 @@
             this.panelThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
             this.panelThanhToan.Controls.Add(this.btnHoaDon);
             this.panelThanhToan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelThanhToan.Location = new System.Drawing.Point(0, 690);
+            this.panelThanhToan.Location = new System.Drawing.Point(0, 740);
             this.panelThanhToan.Name = "panelThanhToan";
             this.panelThanhToan.Size = new System.Drawing.Size(199, 60);
             this.panelThanhToan.TabIndex = 7;
@@ -414,7 +416,7 @@
             this.btnThanhToan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThanhToan.IconSize = 32;
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhToan.Location = new System.Drawing.Point(0, 630);
+            this.btnThanhToan.Location = new System.Drawing.Point(0, 680);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnThanhToan.Size = new System.Drawing.Size(199, 60);
@@ -512,6 +514,22 @@
             this.panelForm.Size = new System.Drawing.Size(862, 629);
             this.panelForm.TabIndex = 3;
             // 
+            // btnLoaiDichVu
+            // 
+            this.btnLoaiDichVu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiDichVu.FlatAppearance.BorderSize = 0;
+            this.btnLoaiDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaiDichVu.ForeColor = System.Drawing.Color.LightGray;
+            this.btnLoaiDichVu.Location = new System.Drawing.Point(0, 250);
+            this.btnLoaiDichVu.Name = "btnLoaiDichVu";
+            this.btnLoaiDichVu.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLoaiDichVu.Size = new System.Drawing.Size(199, 50);
+            this.btnLoaiDichVu.TabIndex = 6;
+            this.btnLoaiDichVu.Text = "Loại Dịch Vụ";
+            this.btnLoaiDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiDichVu.UseVisualStyleBackColor = true;
+            this.btnLoaiDichVu.Click += new System.EventHandler(this.btnLoaiDichVu_Click);
+            // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -577,5 +595,6 @@
         private FontAwesome.Sharp.IconPictureBox btnSignOut;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconPictureBox btnExit;
+        private System.Windows.Forms.Button btnLoaiDichVu;
     }
 }

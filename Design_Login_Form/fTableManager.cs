@@ -215,6 +215,11 @@ namespace Design_Login_Form
             ActivateSubButton(btnVe, RBGCollors.color1);
             openForm(new fQuanLyVeBan());
         }
+        private void btnLoaiDichVu_Click(object sender, EventArgs e)
+        {
+            ActivateSubButton(btnLoaiDichVu, RBGCollors.color1);
+            openForm(new fQuanLyLoaiDichVu());
+        }
         #endregion
 
         private void btnBaoCao_Click(object sender, EventArgs e)
@@ -334,5 +339,7 @@ namespace Design_Login_Form
         }
 
         #endregion
+
+
     }
 }
