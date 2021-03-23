@@ -64,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(546, 545);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 57;
             this.label1.Text = "Tổng:";
             // 
@@ -72,7 +72,7 @@
             // 
             this.txbTongDoanhThu.Location = new System.Drawing.Point(597, 541);
             this.txbTongDoanhThu.Name = "txbTongDoanhThu";
-            this.txbTongDoanhThu.Size = new System.Drawing.Size(197, 23);
+            this.txbTongDoanhThu.Size = new System.Drawing.Size(197, 27);
             this.txbTongDoanhThu.TabIndex = 62;
             this.txbTongDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -85,7 +85,7 @@
             this.dtpkThangLuong.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkThangLuong.Location = new System.Drawing.Point(197, 67);
             this.dtpkThangLuong.Name = "dtpkThangLuong";
-            this.dtpkThangLuong.Size = new System.Drawing.Size(198, 23);
+            this.dtpkThangLuong.Size = new System.Drawing.Size(198, 27);
             this.dtpkThangLuong.TabIndex = 61;
             // 
             // btnThongKeLuong
@@ -105,7 +105,7 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(193, 48);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(99, 16);
+            this.label31.Size = new System.Drawing.Size(113, 19);
             this.label31.TabIndex = 58;
             this.label31.Text = "Tháng Lương:";
             // 
@@ -136,13 +136,13 @@
             this.labelThôngTinNhânViên.AutoSize = true;
             this.labelThôngTinNhânViên.Location = new System.Drawing.Point(6, 127);
             this.labelThôngTinNhânViên.Name = "labelThôngTinNhânViên";
-            this.labelThôngTinNhânViên.Size = new System.Drawing.Size(50, 16);
+            this.labelThôngTinNhânViên.Size = new System.Drawing.Size(58, 19);
             this.labelThôngTinNhânViên.TabIndex = 54;
             this.labelThôngTinNhânViên.Text = "Lương";
             // 
             // fThongKeLuong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);

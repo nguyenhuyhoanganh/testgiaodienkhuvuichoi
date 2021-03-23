@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Design_Login_Form.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Design_Login_Form
         public fQuanLyVeBan()
         {
             InitializeComponent();
+        }
+
+        private void btnXemVe_Click(object sender, EventArgs e)
+        {
+            dtgvVE.DataSource = VeDAO.Instance.Xem();
         }
     }
 }
