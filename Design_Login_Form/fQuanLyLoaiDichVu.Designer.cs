@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.gbQuanLyDichVu = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
+            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.btnXemLoaiDichVu = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txbMaLoaiDichVu = new System.Windows.Forms.TextBox();
             this.labelThôngTinLDV = new System.Windows.Forms.Label();
+            this.txbTenLoaiDichVu = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvThongTinLoaiDichVu = new System.Windows.Forms.DataGridView();
             this.btnTimKiemLoaiDichVu = new System.Windows.Forms.Button();
             this.btnXoaLoaiDichVu = new System.Windows.Forms.Button();
             this.btnSuaLoaiDichVu = new System.Windows.Forms.Button();
             this.btnThemLoaiDichVu = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txbMaLoaiDichVu = new System.Windows.Forms.TextBox();
-            this.txbTenLoaiDichVu = new System.Windows.Forms.TextBox();
-            this.txbTimKiem = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
-            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
             this.gbQuanLyDichVu.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinLoaiDichVu)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbQuanLyDichVu
@@ -73,7 +73,54 @@
             this.gbQuanLyDichVu.Size = new System.Drawing.Size(838, 605);
             this.gbQuanLyDichVu.TabIndex = 1;
             this.gbQuanLyDichVu.TabStop = false;
-            this.gbQuanLyDichVu.Text = "Quản Lý Dịch Vụ";
+            this.gbQuanLyDichVu.Text = "Quản Lý Loại Dịch Vụ";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rbtnTheoMa);
+            this.panel2.Controls.Add(this.rbtnTheoTen);
+            this.panel2.Location = new System.Drawing.Point(217, 17);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(107, 61);
+            this.panel2.TabIndex = 57;
+            // 
+            // rbtnTheoMa
+            // 
+            this.rbtnTheoMa.AutoSize = true;
+            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
+            this.rbtnTheoMa.Name = "rbtnTheoMa";
+            this.rbtnTheoMa.Size = new System.Drawing.Size(86, 20);
+            this.rbtnTheoMa.TabIndex = 1;
+            this.rbtnTheoMa.TabStop = true;
+            this.rbtnTheoMa.Text = "Theo Mã:";
+            this.rbtnTheoMa.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTheoTen
+            // 
+            this.rbtnTheoTen.AutoSize = true;
+            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
+            this.rbtnTheoTen.Name = "rbtnTheoTen";
+            this.rbtnTheoTen.Size = new System.Drawing.Size(92, 20);
+            this.rbtnTheoTen.TabIndex = 0;
+            this.rbtnTheoTen.TabStop = true;
+            this.rbtnTheoTen.Text = "Theo Tên:";
+            this.rbtnTheoTen.UseVisualStyleBackColor = true;
+            // 
+            // txbTimKiem
+            // 
+            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(196, 23);
+            this.txbTimKiem.TabIndex = 56;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(496, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(106, 16);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Mã loại dịch vụ:";
             // 
             // btnXemLoaiDichVu
             // 
@@ -85,15 +132,39 @@
             this.btnXemLoaiDichVu.TabIndex = 55;
             this.btnXemLoaiDichVu.Text = "Xem";
             this.btnXemLoaiDichVu.UseVisualStyleBackColor = false;
+            this.btnXemLoaiDichVu.Click += new System.EventHandler(this.btnXemLoaiDichVu_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(145, 108);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(112, 16);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Tên loại dịch vụ:";
+            // 
+            // txbMaLoaiDichVu
+            // 
+            this.txbMaLoaiDichVu.Location = new System.Drawing.Point(493, 130);
+            this.txbMaLoaiDichVu.Name = "txbMaLoaiDichVu";
+            this.txbMaLoaiDichVu.Size = new System.Drawing.Size(197, 23);
+            this.txbMaLoaiDichVu.TabIndex = 35;
             // 
             // labelThôngTinLDV
             // 
             this.labelThôngTinLDV.AutoSize = true;
             this.labelThôngTinLDV.Location = new System.Drawing.Point(10, 260);
             this.labelThôngTinLDV.Name = "labelThôngTinLDV";
-            this.labelThôngTinLDV.Size = new System.Drawing.Size(180, 19);
+            this.labelThôngTinLDV.Size = new System.Drawing.Size(156, 16);
             this.labelThôngTinLDV.TabIndex = 54;
             this.labelThôngTinLDV.Text = "Thông Tin Loại Dịch Vụ";
+            // 
+            // txbTenLoaiDichVu
+            // 
+            this.txbTenLoaiDichVu.Location = new System.Drawing.Point(148, 129);
+            this.txbTenLoaiDichVu.Name = "txbTenLoaiDichVu";
+            this.txbTenLoaiDichVu.Size = new System.Drawing.Size(197, 23);
+            this.txbTenLoaiDichVu.TabIndex = 34;
             // 
             // panel1
             // 
@@ -106,6 +177,7 @@
             // 
             // dtgvThongTinLoaiDichVu
             // 
+            this.dtgvThongTinLoaiDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvThongTinLoaiDichVu.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtgvThongTinLoaiDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvThongTinLoaiDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -127,6 +199,7 @@
             this.btnTimKiemLoaiDichVu.TabIndex = 51;
             this.btnTimKiemLoaiDichVu.Text = "Tìm kiếm";
             this.btnTimKiemLoaiDichVu.UseVisualStyleBackColor = false;
+            this.btnTimKiemLoaiDichVu.Click += new System.EventHandler(this.btnTimKiemLoaiDichVu_Click);
             // 
             // btnXoaLoaiDichVu
             // 
@@ -138,6 +211,7 @@
             this.btnXoaLoaiDichVu.TabIndex = 50;
             this.btnXoaLoaiDichVu.Text = "Xóa";
             this.btnXoaLoaiDichVu.UseVisualStyleBackColor = false;
+            this.btnXoaLoaiDichVu.Click += new System.EventHandler(this.btnXoaLoaiDichVu_Click);
             // 
             // btnSuaLoaiDichVu
             // 
@@ -149,6 +223,7 @@
             this.btnSuaLoaiDichVu.TabIndex = 49;
             this.btnSuaLoaiDichVu.Text = "Sửa";
             this.btnSuaLoaiDichVu.UseVisualStyleBackColor = false;
+            this.btnSuaLoaiDichVu.Click += new System.EventHandler(this.btnSuaLoaiDichVu_Click);
             // 
             // btnThemLoaiDichVu
             // 
@@ -160,80 +235,11 @@
             this.btnThemLoaiDichVu.TabIndex = 48;
             this.btnThemLoaiDichVu.Text = "Thêm";
             this.btnThemLoaiDichVu.UseVisualStyleBackColor = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(496, 108);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 19);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "Mã loại dịch vụ:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(145, 108);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(128, 19);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "Tên loại dịch vụ:";
-            // 
-            // txbMaLoaiDichVu
-            // 
-            this.txbMaLoaiDichVu.Location = new System.Drawing.Point(493, 130);
-            this.txbMaLoaiDichVu.Name = "txbMaLoaiDichVu";
-            this.txbMaLoaiDichVu.Size = new System.Drawing.Size(197, 27);
-            this.txbMaLoaiDichVu.TabIndex = 35;
-            // 
-            // txbTenLoaiDichVu
-            // 
-            this.txbTenLoaiDichVu.Location = new System.Drawing.Point(148, 129);
-            this.txbTenLoaiDichVu.Name = "txbTenLoaiDichVu";
-            this.txbTenLoaiDichVu.Size = new System.Drawing.Size(197, 27);
-            this.txbTenLoaiDichVu.TabIndex = 34;
-            // 
-            // txbTimKiem
-            // 
-            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
-            this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
-            this.txbTimKiem.TabIndex = 56;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rbtnTheoMa);
-            this.panel2.Controls.Add(this.rbtnTheoTen);
-            this.panel2.Location = new System.Drawing.Point(217, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 61);
-            this.panel2.TabIndex = 57;
-            // 
-            // rbtnTheoTen
-            // 
-            this.rbtnTheoTen.AutoSize = true;
-            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
-            this.rbtnTheoTen.Name = "rbtnTheoTen";
-            this.rbtnTheoTen.Size = new System.Drawing.Size(103, 23);
-            this.rbtnTheoTen.TabIndex = 0;
-            this.rbtnTheoTen.TabStop = true;
-            this.rbtnTheoTen.Text = "Theo Tên:";
-            this.rbtnTheoTen.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTheoMa
-            // 
-            this.rbtnTheoMa.AutoSize = true;
-            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
-            this.rbtnTheoMa.Name = "rbtnTheoMa";
-            this.rbtnTheoMa.Size = new System.Drawing.Size(98, 23);
-            this.rbtnTheoMa.TabIndex = 1;
-            this.rbtnTheoMa.TabStop = true;
-            this.rbtnTheoMa.Text = "Theo Mã:";
-            this.rbtnTheoMa.UseVisualStyleBackColor = true;
+            this.btnThemLoaiDichVu.Click += new System.EventHandler(this.btnThemLoaiDichVu_Click);
             // 
             // fQuanLyLoaiDichVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(862, 629);
@@ -245,10 +251,10 @@
             this.Text = "fQuanLyLoaiDichVu";
             this.gbQuanLyDichVu.ResumeLayout(false);
             this.gbQuanLyDichVu.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinLoaiDichVu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinLoaiDichVu)).EndInit();
             this.ResumeLayout(false);
 
         }

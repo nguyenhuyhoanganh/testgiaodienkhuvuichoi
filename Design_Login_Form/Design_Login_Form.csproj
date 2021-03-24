@@ -51,8 +51,12 @@
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\LoaiDVDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\VeDAO.cs" />
+    <Compile Include="DTO\DichVu.cs" />
+    <Compile Include="DTO\LoaiDV.cs" />
     <Compile Include="DTO\Ve.cs" />
     <Compile Include="fBaoCaoDoanhThu.cs">
       <SubType>Form</SubType>
