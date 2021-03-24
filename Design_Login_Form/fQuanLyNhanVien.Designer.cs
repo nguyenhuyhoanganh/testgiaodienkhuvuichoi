@@ -55,12 +55,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbMaNhanVien = new System.Windows.Forms.TextBox();
-            this.txbMaKhu_NV = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbSD_NV = new System.Windows.Forms.TextBox();
             this.txbTen_NV = new System.Windows.Forms.TextBox();
             this.labelThôngTinNhânViên = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbQuanLyNhanVien.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +70,7 @@
             // 
             // gbQuanLyNhanVien
             // 
+            this.gbQuanLyNhanVien.Controls.Add(this.comboBox1);
             this.gbQuanLyNhanVien.Controls.Add(this.btnXemNV);
             this.gbQuanLyNhanVien.Controls.Add(this.btnXoaNV);
             this.gbQuanLyNhanVien.Controls.Add(this.btnSuaNV);
@@ -91,7 +92,6 @@
             this.gbQuanLyNhanVien.Controls.Add(this.label6);
             this.gbQuanLyNhanVien.Controls.Add(this.label3);
             this.gbQuanLyNhanVien.Controls.Add(this.txbMaNhanVien);
-            this.gbQuanLyNhanVien.Controls.Add(this.txbMaKhu_NV);
             this.gbQuanLyNhanVien.Controls.Add(this.label7);
             this.gbQuanLyNhanVien.Controls.Add(this.label2);
             this.gbQuanLyNhanVien.Controls.Add(this.txbSD_NV);
@@ -359,13 +359,6 @@
             this.txbMaNhanVien.Size = new System.Drawing.Size(197, 27);
             this.txbMaNhanVien.TabIndex = 18;
             // 
-            // txbMaKhu_NV
-            // 
-            this.txbMaKhu_NV.Location = new System.Drawing.Point(217, 167);
-            this.txbMaKhu_NV.Name = "txbMaKhu_NV";
-            this.txbMaKhu_NV.Size = new System.Drawing.Size(197, 27);
-            this.txbMaKhu_NV.TabIndex = 17;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -407,6 +400,15 @@
             this.labelThôngTinNhânViên.TabIndex = 1;
             this.labelThôngTinNhânViên.Text = "Thông Tin Nhân Viên";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(217, 167);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(197, 27);
+            this.comboBox1.TabIndex = 65;
+            //this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // fQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -420,6 +422,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fQuanLyNhanVien";
             this.Text = "Nhân Viên";
+            this.Load += new System.EventHandler(this.fQuanLyNhanVien_Load);
             this.gbQuanLyNhanVien.ResumeLayout(false);
             this.gbQuanLyNhanVien.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -450,7 +453,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbMaNhanVien;
-        private System.Windows.Forms.TextBox txbMaKhu_NV;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbSD_NV;
@@ -467,5 +469,6 @@
         private System.Windows.Forms.Button btnXoaNV;
         private System.Windows.Forms.Button btnSuaNV;
         private System.Windows.Forms.Button btnThemNV;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

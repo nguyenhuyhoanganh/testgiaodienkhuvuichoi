@@ -29,11 +29,11 @@ namespace Design_Login_Form
         private void btnThemNV_Click(object sender, EventArgs e)
         {
             ktgt();
-            if (txbDiaChi.Text == "" || txbLuong_NV.Text == "" || txbMaKhu_NV.Text == "" || txbMaNhanVien.Text == "" || txbMatKhau.Text == "" || txbSD_NV.Text == "" || txbTen_NV.Text == "")
+            if (txbDiaChi.Text == "" || txbLuong_NV.Text == "" || comboBox1.Text == "" || txbMaNhanVien.Text == "" || txbMatKhau.Text == "" || txbSD_NV.Text == "" || txbTen_NV.Text == "")
             {
                 MessageBox.Show("Mời nhập đầy đủ các thông tin của nhân viên này", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (Regex.IsMatch(txbLuong_NV.Text, "\\d") == false)
+            else if (Regex.IsMatch(txbLuong_NV.Text, "\\d") == false)
                 MessageBox.Show("Lương nhân viên phải là số tự nhiên lớn hơn 0", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //else if(Regex.IsMatch(txbTen_NV.Text,"\\D")== true)
             //    MessageBox.Show("Tên nhân viên không thể có ký tự nằm ngoài a-z hoặc A-Z", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -44,7 +44,7 @@ namespace Design_Login_Form
                 using (SqlConnection sqlcon = new SqlConnection(ConnectionString.str))
                 {
                     sqlcon.Open();
-                    SqlCommand command = new SqlCommand("execute themnv N'" + txbMaNhanVien.Text + "', N'" + txbTen_NV.Text + "', '" + dtpkNgaySinh_NV.Value + "', N'" + txbSD_NV.Text + "', N'" + gioitinh + "', N'" + txbLuong_NV.Text + "', N'" + txbMatKhau.Text + "', N'" + txbMaKhu_NV.Text + "', N'" + txbDiaChi.Text + "'", sqlcon);
+                    SqlCommand command = new SqlCommand("execute themnv N'" + txbMaNhanVien.Text + "', N'" + txbTen_NV.Text + "', '" + dtpkNgaySinh_NV.Value + "', N'" + txbSD_NV.Text + "', N'" + gioitinh + "', N'" + txbLuong_NV.Text + "', N'" + txbMatKhau.Text + "', N'" + comboBox1.Text + "', N'" + txbDiaChi.Text + "'", sqlcon);
                     //sqlcon.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
                     command.ExecuteNonQuery();
                 }
@@ -100,7 +100,7 @@ namespace Design_Login_Form
         private void btnSuaNV_Click(object sender, EventArgs e)
         {
             ktgt();
-            if (txbDiaChi.Text == "" || txbMaKhu_NV.Text == "" || txbMaNhanVien.Text == "" || txbSD_NV.Text == "" || txbTen_NV.Text == "")
+            if (txbDiaChi.Text == "" || comboBox1.Text == "" || txbMaNhanVien.Text == "" || txbSD_NV.Text == "" || txbTen_NV.Text == "")
             {
                 MessageBox.Show("Mời nhập đầy đủ các thông tin của nhân viên này", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -129,10 +129,32 @@ namespace Design_Login_Form
             }
         }
 
+        private void comboBox1_Index()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(ConnectionString.str))
+            {
+                sqlcon.Open();
+                SqlCommand command = new SqlCommand("select makhu from khuvuichoi ", sqlcon);
+                SqlDataReader reader = command.ExecuteReader();
+                while(reader.Read())
+                {
+                    comboBox1.Items.Add(reader["makhu"].ToString());
+                    comboBox1.DisplayMember = (reader["makhu"].ToString());
+                    comboBox1.ValueMember = (reader["makhu"].ToString());
+                }
+            }
+            }
+
+        private void fQuanLyNhanVien_Load(object sender, EventArgs e)
+        {
+            comboBox1_Index();
+        }
+
         DateTime ns;
 
         private void dtgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txbMatKhau.Text = "";
             if (dtgvNV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 DataGridViewRow row = this.dtgvNV.Rows[e.RowIndex];
@@ -146,7 +168,7 @@ namespace Design_Login_Form
                 sdt = row.Cells[3].Value.ToString();
                 txbLuong_NV.Text = row.Cells[4].Value.ToString();
                 luong = row.Cells[4].Value.ToString();
-                txbMaKhu_NV.Text = row.Cells[5].Value.ToString();
+                comboBox1.Text = row.Cells[5].Value.ToString();
                 makhu = row.Cells[5].Value.ToString();
                 txbDiaChi.Text = row.Cells[6].Value.ToString();
                 diachi = row.Cells[6].Value.ToString();
