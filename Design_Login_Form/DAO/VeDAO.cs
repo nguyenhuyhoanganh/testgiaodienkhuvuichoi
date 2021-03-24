@@ -42,8 +42,20 @@ namespace Design_Login_Form.DAO
         public int Them(Ve ve)
         {
             string query = "themVE @maVe , @nL , @tE , @maKhu , @maNV , N' @ngayBan ' , @tongTien";
+            string query1 = "themVe " + ve.MaVe + ", " + ve.SoLuongNL.ToString() + ", " + ve.SoLuongTE.ToString() +
+                ", " + ve.MaKhu + ", " + ve.MaNV + ", '" + ve.NgayBan.ToString() + "', " + ve.TongTien.ToString();
             object[] para = new object[] { ve.MaVe, ve.SoLuongNL, ve.SoLuongTE, ve.MaKhu, ve.MaNV, ve.NgayBan, ve.TongTien };
-            return DataProvider.Instance.ExecuteNonQuery(query, para);
+            return DataProvider.Instance.ExecuteNonQuery(query1);
+        }
+        public int Xoa(Ve ve)
+        {
+            string query = "xoaVE " + ve.MaVe;
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int Sua(Ve ve)
+        {
+            string que = "suaVE " + ve.MaVe + ", " + ve.SoLuongNL.ToString() + ", " + ve.SoLuongTE.ToString();
+            return DataProvider.Instance.ExecuteNonQuery(que);
         }
     }
 }
