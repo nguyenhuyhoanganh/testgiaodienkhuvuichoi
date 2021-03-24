@@ -12,7 +12,7 @@ namespace Design_Login_Form
 {
     public partial class fQuanLyKhuVuiChoi : Form
     {
-        static String connString = @"Data Source=DESKTOP-Q6S8P58\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
+        static String connString = ConnectionString.str;
         SqlConnection conn = new SqlConnection(connString);
         public fQuanLyKhuVuiChoi()
         {
