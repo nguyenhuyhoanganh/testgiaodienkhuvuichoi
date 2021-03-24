@@ -16,7 +16,7 @@ namespace Design_Login_Form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fQuanLyNhanVien());
+            Application.Run(new fLogin());
         }
     }
 }
