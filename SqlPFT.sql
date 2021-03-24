@@ -1,330 +1,613 @@
---dangnhap: Đăng nhập vào chương trình quản lý
-CREATE OR ALTER PROC dangNhap @MANV NCHAR(10), @MATKHAU NVARCHAR(20)
-AS
-BEGIN
-select * from NHANVIEN where MANV= @MANV and MATKHAU= @MATKHAU
-END
-go
---doiMK: Đổi mật khẩu
-CREATE OR ALTER PROC doiMK @MANV NCHAR(10), @MATKHAUMOI NVARCHAR(20)
-AS
-BEGIN
-UPDATE NHANVIEN
-SET MATKHAU=@MATKHAUMOI
-WHERE MANV=@MANV
-END
-go
---themVE: Thêm vé bán ra
-create or  alter proc themVE
-@mave nchar(10), @soluongnl int,@soluongte int, @makhu nchar(10),
-@manv nchar(10), @ngayban date, @tongtien money
-as begin
-insert into dbo.VE(MAVE, SOLUONGNL, SOLUONGTE, MAKHU, MANV, NGAYBAN, TONGTIEN)
-values(@mave, @soluongnl, @soluongte, @makhu, @manv, @ngayban, @tongtien)
-end 
-go
---suaVE: Cập nhật lại vé của khu vui chơi
-create or alter proc suaVE
-@mave nchar(10),@soluongnl int, @soluongte int
-as begin
-declare @a money, @b money
-select @a= k.GIAVENL, @b=k.GIAVETE from KHUVUICHOI as k, VE as v where k.MAKHU= v.MAKHU and v.MAVE=@mave
-update VE set SOLUONGNL=@soluongnl, SOLUONGTE=@soluongte,
-TONGTIEN=CAST(@soluongnl as money)*@a+CAST(@soluongte as money)*@b
-where MAVE=@mave
-End
-go
-go
+--dangnhap: Đăng nhập vào chương trình quản lý 
 
---xoaVE : Xóa đi  1 vé
-create or alter proc xoaVE
-@ma nchar(10)
-as begin
-delete from VE where MAVE=@ma
-end
-go
+CREATE OR ALTER PROC dangNhap @MANV NCHAR(10), @MATKHAU NVARCHAR(20) 
 
---themNV: Thêm nhân viên v
-create or alter proc themNV
-@MANV nchar(10),@TENNV nvarchar(50),@NGAYSINH date, @SDT nchar(10), @GIOITINH 	nchar(3),@LUONG money,@MATKHAU nvarchar(20),@MAKHU nchar(10),@DIACHI nvarchar(50)
+AS 
+
+BEGIN 
+
+SELECT * 
+
+FROM NHANVIEN 
+
+WHERE MANV=@MANV AND MATKHAU=@MATKHAU 
+
+END 
+
+go 
+
+--doiMK: Đổi mật khẩu 
+
+CREATE OR ALTER PROC doiMK @MANV NCHAR(10), @MATKHAUMOI NVARCHAR(20) 
+
+AS 
+
+BEGIN 
+
+UPDATE NHANVIEN 
+
+SET MATKHAU=@MATKHAUMOI 
+
+WHERE MANV=@MANV 
+
+END 
+
+go 
+
+--themVE: Thêm vé bán ra 
+
+create or  alter proc themVE 
+
+@mave nchar(10), @soluongnl int,@soluongte int, @makhu nchar(10), 
+
+@manv nchar(10), @ngayban date, @tongtien money 
+
 as begin 
-insert  into dbo.NHANVIEN(MANV,TENNV,NGAYSINH,SDT,GIOITINH,LUONG,MAKHU,DIACHI,
-MATKHAU)
-values(@MANV,@TENNV,@NGAYSINH, @SDT, @GIOITINH,@LUONG,@MAKHU,@DIACHI,@MATKHAU)
-end
-go
 
---timkiemVe: Tìm kiếm vé Theo mã vẽ
-create or alter proc timkiemVe
-@mave nvarchar(10)
-as begin
-select * from VE where MAVE=@mave
-end
-go
---xoa1NV: Xóa đi một nhân viên
-create or alter  proc xoa1NV
-@ma nchar(10)
-as begin
-declare curNV cursor 
-for select bl.SOBL
-from BIENLAI as bl 
-where bl.MANV=@ma
-declare @sobl nchar(10)
-open curNV
-fetch next from curNV into @sobl
-while (@@FETCH_STATUS=0)
-begin
-delete from CHITIETBL where SOBL=@sobl
-fetch next from curNV into @sobl
-end
-close curNV
-deallocate curNV
-delete from BIENLAI where BIENLAI.MANV=@ma
-delete from VE where VE.MAVE=@ma
-delete from NHANVIEN where NHANVIEN.MANV=@ma
-end
-go
---capNhatNV: Cập nhật lại lương của nhân viên của khu vui chơi
-create or alter proc capNhatNV
-@ma nchar(10), @luong money
-as begin
-update NHANVIEN set LUONG=@luong where MANV=@ma
-End
-go
---timkiemNV: Tìm kiếm nhân viên theo mã nhân viên
-create proc timkiemNV
-@manv nvarchar(10)
-as begin
-select * from NHANVIEN where MANV=@manv
-end
-go
---themTrochoi: Thêm một trò chơi
-create or  alter proc themTrochoi(@MATC nchar(10),@TENTC nvarchar(50),@MAKHU nchar(10))
-  
-as begin 
- 
-insert into TROCHOI(MATC,TENTC,MAKHU) 
- 
-values(@MATC,@TENTC,@MAKHU) 
- 
+insert into dbo.VE(MAVE, SOLUONGNL, SOLUONGTE, MAKHU, MANV, NGAYBAN, TONGTIEN) 
+
+values(@mave, @soluongnl, @soluongte, @makhu, @manv, @ngayban, @tongtien) 
+
 end  
-go
---CapnhatTrochoi: Cập nhật lại dịch vụ của khu vui chơi
-create or alter proc  capnhatTroChoi(@MATC nchar(10),@TENTC nvarchar(50),@MAKHU nchar(10))
-as begin
-update TROCHOI set MAKHU= @MAKHU,TENTC=@TENTC where MATC=@MATC
-end
-go
--- XoaTroChoi:
-create or alter proc xoaTroChoi
-@MATC nchar(10)
-as begin
-delete from TROCHOI where MATC=@MATC
-end
-go
---suaDICHVU: Cập nhật lại dịch vụ của khu vui chơi
-create or alter proc suaDICHVU
-(@madv nchar(10), @tendv nvarchar(50), @maldv nchar(10), @dongia money)
-as begin
-update DICHVU set
-TENDV=@tendv, MALDV=@maldv, DONGIA=@dongia
-where MADV=@madv
-end
-go
---xoaDICHVU: Xóa đi một dịch vụ của khu vui chơi
-create or alter proc xoaDICHVU @madv nchar(10)
-as begin
-delete from DICHVU where DICHVU.MADV=@madv 
-delete from CHITIETBL where CHITIETBL.MADV=@madv
-end
-go
---suaLOAIDV: Cập nhật lại thông tin của loại dịch vụ
-create or alter proc suaLOAIDV
-(@maldv nchar(10), @tenldv nvarchar(50))
-as begin
-update LOAIDV set
-TENLDV=@tenldv
-where MALDV=@maldv
-end
-go
---xoaLOAIDV: Xóa một loại dịch vụ
-create or alter proc xoaLOAIDV @maldv nchar(10)
-as begin
-declare curLDV cursor
-for select dv.MADV from DICHVU as dv
-where dv.MALDV=@maldv
-declare @madv nchar(10)
-open curLDV
-fetch next from curLDV into @madv 
-while (@@FETCH_STATUS=0) 
-begin 
-delete from CHITIETBL where CHITIETBL.MADV=@madv
-fetch next from curLDV into @madv 
+
+go 
+
+--suaVE: Cập nhật lại vé của khu vui chơi 
+
+create or alter proc suaVE 
+
+@mave nchar(10),@soluongnl int, @soluongte int 
+
+as begin 
+
+declare @a money, @b money 
+
+select @a= k.GIAVENL, @b=k.GIAVETE from KHUVUICHOI as k, VE as v where k.MAKHU= v.MAKHU and v.MAVE=@mave 
+
+update VE set SOLUONGNL=@soluongnl, SOLUONGTE=@soluongte, 
+
+TONGTIEN=CAST(@soluongnl as money)*@a+CAST(@soluongte as money)*@b 
+
+where MAVE=@mave 
+
+End 
+
+go 
+
+go 
+
+ 
+
+--xoaVE : Xóa đi  1 vé 
+
+create or alter proc xoaVE 
+
+@ma nchar(10) 
+
+as begin 
+
+delete from VE where MAVE=@ma 
+
 end 
-close curLDV 
-deallocate curLDV 
-delete from LOAIDV where MALDV=@maldv
-delete from DICHVU where DICHVU.MALDV=@maldv 
-end
-go
---Thông tin trochoi: Xem thông tin trò chơi 
-create or alter proc ThongTinTroChoi
-as begin
-select TENKHU, TENTC from KHUVUICHOI,TROCHOI
-WHERE TROCHOI.MAKHU=KHUVUICHOI.MAKHU
-end
-go
--- themKHUVUICHOI: Thêm khu vui chơi
-create or alter proc themKHUVUICHOI(@makhu nchar(10),@tenkhu nvarchar(50),@giavenl money,@giavete money,@diadiem nvarchar(50))
- as begin
- insert into dbo.KHUVUICHOI(MAKHU, TENKHU, GIAVENL, GIAVETE, DIADIEM)
- values(@makhu,@tenkhu,@giavenl,@giavete,@diadiem)
- end
-go
---CapnhatKhuVuiChoi: Cập nhật lại thông tin của khu vui chơi
-create or alter proc CapNhatKhuVuiChoi(@MAKHU nchar(10),@TENKHU nvarchar(50),@GIAVENL money,@GIAVETE money,@DIADIEM nvarchar(50))
 
-as begin
-update KHUVUICHOI set                      TENKHU=@TENKHU,GIAVENL=@GIAVENL,GIAVETE=@GIAVETE,DIADIEM=@DIADIEM 
-             where MAKHU=@MAKHU
-end
-go
- -- XoaKhuVuiChoi: Xóa khu vui chơi
-create or alter proc xoaKhuVuiChoi
-         @MAKHU nchar(10)
-as begin
-delete from KHUVUICHOI where MAKHU=@MAKHU
-end
-go
--- Capnhatthongtin: Cập nhật thông tin nhân viên
-create or alter proc Capnhatthongtin (@MANV nchar(10),@TENNV nvarchar(50),@Ngaysinh date,@SDT nchar(10) ,@GIOITINH nchar(3),@DIACHI nvarchar(50))
-as begin
+go 
 
-update NHANVIEN set   TENNV=@TENNV,
-                                   NGAYSINH=@Ngaysinh,
-                                   SDT=@SDT,
-                                   GIOITINH=@GIOITINH,
-     DIACHI=@DIACHI
-where MANV=@MANV
-end
-go
---THEMDICHVU: Thêm dịch vụ khi đã có mã loại dịch vụ
-CREATE OR ALTER PROC THEMDICHVU 
  
-         @MADV nchar(10),
- @TENDV nvarchar(25),
- @DONGIA money,
- @MALDV nchar(10)
+
+--themNV: Thêm nhân viên v 
+
+create or alter proc themNV 
+
+@MANV nchar(10),@TENNV nvarchar(50),@NGAYSINH date, @SDT nchar(10), @GIOITINH 	nchar(3),@LUONG money,@MATKHAU nvarchar(20),@MAKHU nchar(10),@DIACHI nvarchar(50) 
+
+as begin  
+
+insert  into dbo.NHANVIEN(MANV,TENNV,NGAYSINH,SDT,GIOITINH,LUONG,MAKHU,DIACHI, 
+
+MATKHAU) 
+
+values(@MANV,@TENNV,@NGAYSINH, @SDT, @GIOITINH,@LUONG,@MAKHU,@DIACHI,@MATKHAU) 
+
+end 
+
+go 
+
  
+
+go 
+
+ 
+
+--timkiemVe: Tìm kiếm vé Theo mã vẽ 
+
+create or alter proc timkiemVe 
+
+@mave nvarchar(10) 
+
 as begin 
- 
-if (select COUNT(LOAIDV.MALDV) from LOAIDV where LOAIDV.MALDV = @MALDV) = 0
-print(N'KHÔNG CÓ LOẠI DỊCH VỤ NÀY!')
-else
-insert DICHVU(MADV, TENDV, DONGIA, MALDV) values(@MADV, @TENDV, @DONGIA, @MALDV)
-end
-go
--- THEMLOAIDICHVU: Thêm loại dịch vụ cho khu vui chơi
-CREATE OR ALTER PROC THEMlOAIDICHVU 
- 
-         @MALDV nchar(10),
- @TENLDV nvarchar(25)
- 
- 
+
+select * from VE where MAVE=@mave 
+
+end 
+
+go 
+
+--xoa1NV: Xóa đi một nhân viên 
+
+create or alter  proc xoa1NV 
+
+@ma nchar(10) 
+
 as begin 
+
+declare curNV cursor  
+
+for select bl.SOBL 
+
+from BIENLAI as bl  
+
+where bl.MANV=@ma 
+
+declare @sobl nchar(10) 
+
+open curNV 
+
+fetch next from curNV into @sobl 
+
+while (@@FETCH_STATUS=0) 
+
+begin 
+
+delete from CHITIETBL where SOBL=@sobl 
+
+fetch next from curNV into @sobl 
+
+end 
+
+close curNV 
+
+deallocate curNV 
+
+delete from BIENLAI where BIENLAI.MANV=@ma 
+
+delete from VE where VE.MAVE=@ma 
+
+delete from NHANVIEN where NHANVIEN.MANV=@ma 
+
+end 
+
+go 
+
+--capNhatNV: Cập nhật lại lương của nhân viên của khu vui chơi 
+
+create or alter proc capNhatNV 
+
+@ma nchar(10), @luong money 
+
+as begin 
+
+update NHANVIEN set LUONG=@luong where MANV=@ma 
+
+End 
+
+go 
+
+--timkiemNV: Tìm kiếm nhân viên theo mã nhân viên 
+
+create or alter proc timkiemNV 
+
+@manv nvarchar(10) 
+
+as begin 
+
+select * from NHANVIEN where MANV=@manv 
+
+end 
+
+go 
+
+--themTrochoi: Thêm một trò chơi 
+
+create or  alter proc themTrochoi(@MATC nchar(10),@TENTC nvarchar(50),@MAKHU nchar(10)) 
+
+   
+
+as begin  
+
+  
+
+insert into TROCHOI(MATC,TENTC,MAKHU)  
+
+  
+
+values(@MATC,@TENTC,@MAKHU)  
+
+  
+
+end   
+
+go 
+
+--CapnhatTrochoi: Cập nhật lại dịch vụ của khu vui chơi 
+
+create or alter proc  capnhatTroChoi(@MATC nchar(10),@TENTC nvarchar(50),@MAKHU nchar(10)) 
+
+as begin 
+
+update TROCHOI set MAKHU= @MAKHU,TENTC=@TENTC where MATC=@MATC 
+
+end 
+
+go 
+
+-- XoaTroChoi: 
+
+create or alter proc xoaTroChoi 
+
+@MATC nchar(10) 
+
+as begin 
+
+delete from TROCHOI where MATC=@MATC 
+
+end 
+
+go 
+
+--suaDICHVU: Cập nhật lại dịch vụ của khu vui chơi 
+
+create or alter proc suaDICHVU 
+
+(@madv nvarchar(20), @tendv nvarchar(50), @dongia money,@maldv nvarchar(10) ) 
+
+as begin 
+
+update DICHVU set 
+
+TENDV=@tendv, MALDV=@maldv, DONGIA=@dongia 
+
+where MADV=@madv 
+
+end 
+
+go 
+
+--xoaDICHVU: Xóa đi một dịch vụ của khu vui chơi 
+
+create or alter proc xoaDICHVU @madv nvarchar(10) 
+
+as begin 
+
+delete from DICHVU where DICHVU.MADV=@madv  
+
+delete from CHITIETBL where CHITIETBL.MADV=@madv 
+
+end 
+
+go 
+
+--suaLOAIDV: Cập nhật lại thông tin của loại dịch vụ 
+
+create or alter proc suaLOAIDV 
+
+(@maldv nvarchar(20), @tenldv nvarchar(50)) 
+
+as begin 
+
+update LOAIDV set 
+
+TENLDV=@tenldv 
+
+where MALDV=@maldv 
+
+end 
+
+go 
+
+--xoaLOAIDV: Xóa một loại dịch vụ 
+
+create or alter proc xoaLOAIDV @maldv nchar(10) 
+
+as begin 
+
+declare curLDV cursor 
+
+for select dv.MADV from DICHVU as dv 
+
+where dv.MALDV=@maldv 
+
+declare @madv nchar(10) 
+
+open curLDV 
+
+fetch next from curLDV into @madv  
+
+while (@@FETCH_STATUS=0)  
+
+begin  
+
+delete from CHITIETBL where CHITIETBL.MADV=@madv 
+
+fetch next from curLDV into @madv  
+
+end  
+
+close curLDV  
+
+deallocate curLDV  
+update DICHVU set DICHVU.MALDV = null where DICHVU.MALDV=@maldv 
+
+delete from LOAIDV where MALDV=@maldv 
+
+ end 
+
+go 
+
+--Thông tin trochoi: Xem thông tin trò chơi  
+
+create or alter proc ThongTinTroChoi 
+
+as begin 
+
+select TENKHU, TENTC from KHUVUICHOI,TROCHOI 
+
+WHERE TROCHOI.MAKHU=KHUVUICHOI.MAKHU 
+
+end 
+
+go 
+
+-- themKHUVUICHOI: Thêm khu vui chơi 
+
+create or alter proc themKHUVUICHOI(@makhu nchar(10),@tenkhu nvarchar(50),@giavenl money,@giavete money,@diadiem nvarchar(50)) 
+
+ as begin 
+
+ insert into dbo.KHUVUICHOI(MAKHU, TENKHU, GIAVENL, GIAVETE, DIADIEM) 
+
+ values(@makhu,@tenkhu,@giavenl,@giavete,@diadiem) 
+
+ end 
+
+go 
+
+--CapnhatKhuVuiChoi: Cập nhật lại thông tin của khu vui chơi 
+
+create or alter proc CapNhatKhuVuiChoi(@MAKHU nchar(10),@TENKHU nvarchar(50),@GIAVENL money,@GIAVETE money,@DIADIEM nvarchar(50)) 
+
  
-if (select COUNT(LOAIDV.MALDV) from LOAIDV where LOAIDV.MALDV = @MALDV) != 0
-print(N'ĐÃ CÓ LOẠI DỊCH VỤ NÀY!')
-else
-insert LOAIDV(MALDV, TENLDV) values(@MALDV, @TENLDV)
-end
-go
--- Hàm:
-   -- Hàm tinhTienDV :Tính tiền dịch vụ
-CREATE OR ALTER FUNCTION tinhTienDV (@SOBL NCHAR(10), @MADV NCHAR(10))
-RETURNS MONEY
-AS
-BEGIN
-DECLARE @TT MONEY, @SL INT,@DONGIA MONEY
-SELECT @SL=SOLUONG,@DONGIA=DONGIA
-FROM CHITIETBL CT , DICHVU DV
-WHERE CT.MADV=DV.MADV AND SOBL=@SOBL AND DV.MADV=@MADV
-SET @TT=@SL*@DONGIA
-RETURN @TT
-END
-GO
 
-   -- Hàm thongTinBienLai: Đưa ra thông tin biên lai đầu vào là số biên lai
-CREATE OR ALTER FUNCTION thongTinBienLai (@SOBL NCHAR(10))
-RETURNS TABLE
-RETURN
-(SELECT BL.SOBL,NGAYBL,BL.MANV,DV.MADV,SOLUONG, DBO.tinhTienDV(BL.SOBL,DV.MADV) AS TIENDV, V.TONGTIEN AS TIEN_VE,BL.TONGTIEN 
-FROM BIENLAI BL,DICHVU DV, CHITIETBL CT, VE V,KHUVUICHOI KVC
-WHERE BL.SOBL=CT.SOBL AND CT.MADV=DV.MADV AND KVC.MAKHU=DV.MAKHU AND KVC.MAKHU=V.MAKHU
-)
-GO
-   -- Hàm thongKeDoanhThu: Thống kê doanh thu của khu vui chơi qua các dịch vụ được khách hàng sử dụng và trả phí được lưu qua biên lai
-CREATE OR ALTER FUNCTION thongKeDoanhThu(@NGAYBD DATE,@NGAYKT DATE)
-RETURNS TABLE
-RETURN
-(
-SELECT NGAYBL, BL.SOBL, BL.TONGTIEN as TONGTIENDV, V.TONGTIEN AS TIENVE
-FROM BIENLAI BL, VE V 
-WHERE NGAYBL BETWEEN @NGAYBD AND @NGAYKT AND V.NGAYBAN BETWEEN @NGAYBD AND @NGAYKT
-)
-go
-   -- Hàm thongKeChiTiet: Thống kê doanh thu của khu vui chơi qua các dịch vụ được khách hàng sử dụng và trả phí thông qua vé, biên lai
-CREATE OR ALTER FUNCTION thongKeChiTiet(@NGAYBD DATE,@NGAYKT DATE)
-RETURNS TABLE
-RETURN
-(
-SELECT NGAYBL, BL.MANV, DV.MADV, BL.SOBL, CT.SOLUONG, DV.DONGIA,
-dbo.tinhTienDV(BL.SOBL,DV.MADV) as TIENDV, KV.MAKHU,
-SOLUONGNL, SOLUONGTE, V.TONGTIEN AS TONGTIENVE, BL.TONGTIEN as TONGTIENBIENLAI
-FROM BIENLAI BL, CHITIETBL CT, DICHVU DV, KHUVUICHOI KV, VE V
-WHERE BL.SOBL=CT.SOBL AND CT.MADV=DV.MADV AND DV.MAKHU=KV.MAKHU
-AND V.MAKHU=KV.MAKHU
-)
-go
+as begin 
 
---Thông tin nhân viên trong khu vui chơi
-CREATE OR ALTER FUNCTION thonginnhanvien()
-RETURNS TABLE
-RETURN
-(
-SELECT * FROM NHANVIEN 
-)
-go
---Thông tin dịch vụ trong khu vui chơi
-CREATE OR ALTER FUNCTION thongtindichvu()
-RETURNS TABLE
-RETURN
-(
-SELECT * FROM DICHVU
-)
-go
---Thông tin dịch vụ của loại dịch vụ có mã ” mã_loại_dịch_vụ”
-SELECT * FROM DICHVU JOIN LOAIDV ON LOAIDV.MALDV = DICHVU.MADV WHERE DICHVU.MALDV=' mã_loại_dịch_vụ'
-go
--- Hàm thongKeLuong: Thống kê lương của nhân viên
-CREATE OR ALTER FUNCTION thongKeLuong()
-RETURNS TABLE
-RETURN
-(
-SELECT MANV, TENNV, DIACHI, LUONG
-FROM NHANVIEN
-)
-go
--- Trigger:
- 	--gioiTinhNhanVien(Nhân viên chỉ có giới tính nam hoặc nữ) 
-create or alter trigger gioiTinhNhanVien on dbo.NHANVIEN
-after insert, update
-as begin
-if exists (select * from inserted i
-where i.GIOITINH not in (N'Nam',N'Nữ'))
+update KHUVUICHOI set                      TENKHU=@TENKHU,GIAVENL=@GIAVENL,GIAVETE=@GIAVETE,DIADIEM=@DIADIEM  
+
+             where MAKHU=@MAKHU 
+
+end 
+
+go 
+
+ -- XoaKhuVuiChoi: Xóa khu vui chơi 
+
+create or alter proc xoaKhuVuiChoi 
+
+         @MAKHU nchar(10) 
+
+as begin 
+
+delete from KHUVUICHOI where MAKHU=@MAKHU 
+
+end 
+
+go 
+
+-- Capnhatthongtin: Cập nhật thông tin nhân viên 
+
+create or alter proc Capnhatthongtin (@MANV nchar(10),@TENNV nvarchar(50),@Ngaysinh date,@SDT nchar(10) ,@GIOITINH nchar(3),@DIACHI nvarchar(50)) 
+
+as begin 
+
+ 
+
+update NHANVIEN set   TENNV=@TENNV, 
+
+                                   NGAYSINH=@Ngaysinh, 
+
+                                   SDT=@SDT, 
+
+                                   GIOITINH=@GIOITINH, 
+
+     DIACHI=@DIACHI 
+
+where MANV=@MANV 
+
+end 
+
+go 
+
+--THEMDICHVU: Thêm dịch vụ khi đã có mã loại dịch vụ 
+
+CREATE OR ALTER PROC THEMDICHVU  
+
+  
+
+         @MADV nchar(10), 
+
+ @TENDV nvarchar(25), 
+
+ @DONGIA money, 
+
+ @MALDV nchar(10) 
+
+  
+
+as begin  
+
+  
+
+if (select COUNT(LOAIDV.MALDV) from LOAIDV where LOAIDV.MALDV = @MALDV) = 0 
+
+print(N'KHÔNG CÓ LOẠI DỊCH VỤ NÀY!') 
+
+else 
+
+insert DICHVU(MADV, TENDV, DONGIA, MALDV) values(@MADV, @TENDV, @DONGIA, @MALDV) 
+
+end 
+
+go 
+
+-- THEMLOAIDICHVU: Thêm loại dịch vụ cho khu vui chơi 
+
+CREATE OR ALTER PROC THEMlOAIDICHVU  
+
+  
+
+         @MALDV nchar(10), 
+
+ @TENLDV nvarchar(25) 
+
+  
+
+  
+
+as begin  
+
+  
+
+if (select COUNT(LOAIDV.MALDV) from LOAIDV where LOAIDV.MALDV = @MALDV) != 0 
+
+print(N'ĐÃ CÓ LOẠI DỊCH VỤ NÀY!') 
+
+else 
+
+insert LOAIDV(MALDV, TENLDV) values(@MALDV, @TENLDV) 
+
+end 
+
+go 
+
+-- Hàm: 
+
+ CREATE OR ALTER FUNCTION thongKeDoanhThu(@NGAYBD DATE,@NGAYKT DATE) 
+
+RETURNS TABLE 
+
+RETURN 
+
+( 
+
+SELECT NGAYBL,SUM(V.SOLUONGNL) AS SOLUONGVENGUOILON, SUM(V.SOLUONGTE) AS SOLUONGVETE,  SUM(V.TONGTIEN) AS TONGTIENVE, SUM(BL.TONGTIEN) as TONGTIENDV 
+
+FROM BIENLAI BL, NHANVIEN NV, VE V 
+
+WHERE BL.MANV=NV.MANV AND NV.MANV=V.MANV AND (NGAYBL BETWEEN @NGAYBD AND @NGAYKT) AND (V.NGAYBAN BETWEEN @NGAYBD AND @NGAYKT) 
+
+GROUP BY NGAYBL 
+
+) 
+
+GO 
+
+--Thông tin nhân viên trong khu vui chơi 
+
+CREATE OR ALTER FUNCTION thonginnhanvien() 
+
+RETURNS TABLE 
+
+RETURN 
+
+( 
+
+SELECT * FROM NHANVIEN  
+
+) 
+
+go 
+
+--Thông tin dịch vụ
+create or alter proc [dbo].[ThongTinDV]
+as
 begin
-raiserror(N'Sai giới tính nhân viên!', 16, 1)
-rollback tran
+SELECT MADV as [Mã dịch vụ],TENDV as[Tên dịch vụ],DONGIA as[Đơn giá],MALDV as [Mã loại dịch vụ]  FROM DICHVU 
 end
-End
 go
+
+--Thông tin loại dịch vụ  
+create or alter  proc [dbo].[ThongTinLDV]
+as
+begin
+SELECT MALDV as [Mã loại dịch vụ],TENLDV as[Tên loại dịch vụ] FROM dbo.LOAIDV 
+end
+go
+
+-- Hàm thongKeLuong: Thống kê lương của nhân viên 
+
+CREATE OR ALTER FUNCTION thongKeLuong() 
+
+RETURNS TABLE 
+
+RETURN 
+
+( 
+
+SELECT MANV, TENNV, DIACHI, LUONG 
+
+FROM NHANVIEN 
+
+) 
+
+go 
+
+-- Trigger: 
+
+ 	--gioiTinhNhanVien(Nhân viên chỉ có giới tính nam hoặc nữ)  
+
+create or alter trigger gioiTinhNhanVien on dbo.NHANVIEN 
+
+after insert, update 
+
+as begin 
+
+if exists (select * from inserted i 
+
+where i.GIOITINH not in (N'Nam',N'Nữ')) 
+
+begin 
+
+raiserror(N'Sai giới tính nhân viên!', 16, 1) 
+
+rollback tran 
+
+end 
+
+End 
+
+go 
+
+--Tìm kiếm dịch vụ theo mã dịch vụ--
+create or alter proc TimKiemDV_Ma @ma nvarchar(50)
+as
+begin
+select * from DICHVU where DICHVU.MADV like '%'+@ma+'%'
+end 
+
+--Tìm kiếm dịch vụ theo tên dịch vụ--
+create or alter proc TimKiemDV_Ten @ten nvarchar(50)
+as
+begin
+select * from DICHVU where DICHVU.TENDV like N'%'+@ten+'%'
+end 
+--Tìm kiếm loại dịch vụ theo mã loại dịch vụ--
+create or alter proc TimKiemLDV_Ma @ma nvarchar(50)
+as
+begin
+select * from LOAIDV where LOAIDV.MALDV like '%'+@ma+'%'
+end 
+--Tìm kiếm loại dịch vụ theo tên loại dịch vụ--
+create or alter proc TimKiemLDV_Ten @ten nvarchar(50)
+as
+begin
+select * from LOAIDV where LOAIDV.TENLDV like N'%'+@ten+'%'
+end 
+
