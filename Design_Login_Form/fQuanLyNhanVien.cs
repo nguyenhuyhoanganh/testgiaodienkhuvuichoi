@@ -80,21 +80,7 @@ namespace Design_Login_Form
 
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-            if (txbMaNhanVien.Text == "")
-            {
-                MessageBox.Show("Chưa nhập mã nhân viên", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                using (SqlConnection sqlcon = new SqlConnection(ConnectionString.str))
-                {
-                    sqlcon.Open();
-                    SqlCommand command = new SqlCommand("execute xoa1NV N'" + txbMaNhanVien.Text + "'", sqlcon);
-                    //sqlcon.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
-                    command.ExecuteNonQuery();
-                }
-                load();
-            }
+
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)

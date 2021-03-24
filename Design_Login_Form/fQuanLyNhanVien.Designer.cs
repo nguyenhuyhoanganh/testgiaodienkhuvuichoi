@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.gbQuanLyNhanVien = new System.Windows.Forms.GroupBox();
+            this.btnXemNV = new System.Windows.Forms.Button();
+            this.btnXoaNV = new System.Windows.Forms.Button();
+            this.btnSuaNV = new System.Windows.Forms.Button();
+            this.btnThemNV = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
+            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiemNV = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvNV = new System.Windows.Forms.DataGridView();
             this.grbGioiTinh_NV = new System.Windows.Forms.GroupBox();
@@ -52,20 +61,11 @@
             this.txbSD_NV = new System.Windows.Forms.TextBox();
             this.txbTen_NV = new System.Windows.Forms.TextBox();
             this.labelThôngTinNhânViên = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
-            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
-            this.txbTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiemNV = new System.Windows.Forms.Button();
-            this.btnXemNV = new System.Windows.Forms.Button();
-            this.btnXoaNV = new System.Windows.Forms.Button();
-            this.btnSuaNV = new System.Windows.Forms.Button();
-            this.btnThemNV = new System.Windows.Forms.Button();
             this.gbQuanLyNhanVien.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
             this.grbGioiTinh_NV.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbQuanLyNhanVien
@@ -105,6 +105,103 @@
             this.gbQuanLyNhanVien.TabStop = false;
             this.gbQuanLyNhanVien.Text = "Quản Lý Nhân Viên";
             // 
+            // btnXemNV
+            // 
+            this.btnXemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemNV.Location = new System.Drawing.Point(231, 215);
+            this.btnXemNV.Name = "btnXemNV";
+            this.btnXemNV.Size = new System.Drawing.Size(75, 33);
+            this.btnXemNV.TabIndex = 64;
+            this.btnXemNV.Text = "Xem";
+            this.btnXemNV.UseVisualStyleBackColor = false;
+            this.btnXemNV.Click += new System.EventHandler(this.btnXemNV_Click);
+            // 
+            // btnXoaNV
+            // 
+            this.btnXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaNV.Location = new System.Drawing.Point(531, 215);
+            this.btnXoaNV.Name = "btnXoaNV";
+            this.btnXoaNV.Size = new System.Drawing.Size(75, 33);
+            this.btnXoaNV.TabIndex = 63;
+            this.btnXoaNV.Text = "Xóa";
+            this.btnXoaNV.UseVisualStyleBackColor = false;
+            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
+            // 
+            // btnSuaNV
+            // 
+            this.btnSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaNV.Location = new System.Drawing.Point(431, 215);
+            this.btnSuaNV.Name = "btnSuaNV";
+            this.btnSuaNV.Size = new System.Drawing.Size(75, 33);
+            this.btnSuaNV.TabIndex = 62;
+            this.btnSuaNV.Text = "Sửa";
+            this.btnSuaNV.UseVisualStyleBackColor = false;
+            this.btnSuaNV.Click += new System.EventHandler(this.btnSuaNV_Click);
+            // 
+            // btnThemNV
+            // 
+            this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemNV.Location = new System.Drawing.Point(331, 215);
+            this.btnThemNV.Name = "btnThemNV";
+            this.btnThemNV.Size = new System.Drawing.Size(75, 33);
+            this.btnThemNV.TabIndex = 61;
+            this.btnThemNV.Text = "Thêm";
+            this.btnThemNV.UseVisualStyleBackColor = false;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rbtnTheoMa);
+            this.panel2.Controls.Add(this.rbtnTheoTen);
+            this.panel2.Location = new System.Drawing.Point(217, 17);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(107, 61);
+            this.panel2.TabIndex = 60;
+            // 
+            // rbtnTheoMa
+            // 
+            this.rbtnTheoMa.AutoSize = true;
+            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
+            this.rbtnTheoMa.Name = "rbtnTheoMa";
+            this.rbtnTheoMa.Size = new System.Drawing.Size(98, 23);
+            this.rbtnTheoMa.TabIndex = 1;
+            this.rbtnTheoMa.TabStop = true;
+            this.rbtnTheoMa.Text = "Theo Mã:";
+            this.rbtnTheoMa.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTheoTen
+            // 
+            this.rbtnTheoTen.AutoSize = true;
+            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
+            this.rbtnTheoTen.Name = "rbtnTheoTen";
+            this.rbtnTheoTen.Size = new System.Drawing.Size(103, 23);
+            this.rbtnTheoTen.TabIndex = 0;
+            this.rbtnTheoTen.TabStop = true;
+            this.rbtnTheoTen.Text = "Theo Tên:";
+            this.rbtnTheoTen.UseVisualStyleBackColor = true;
+            // 
+            // txbTimKiem
+            // 
+            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
+            this.txbTimKiem.TabIndex = 59;
+            // 
+            // btnTimKiemNV
+            // 
+            this.btnTimKiemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnTimKiemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemNV.Location = new System.Drawing.Point(532, 30);
+            this.btnTimKiemNV.Name = "btnTimKiemNV";
+            this.btnTimKiemNV.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemNV.TabIndex = 58;
+            this.btnTimKiemNV.Text = "Tìm kiếm";
+            this.btnTimKiemNV.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dtgvNV);
@@ -126,6 +223,7 @@
             this.dtgvNV.RowTemplate.Height = 24;
             this.dtgvNV.Size = new System.Drawing.Size(812, 300);
             this.dtgvNV.TabIndex = 35;
+            this.dtgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick);
             // 
             // grbGioiTinh_NV
             // 
@@ -309,99 +407,6 @@
             this.labelThôngTinNhânViên.TabIndex = 1;
             this.labelThôngTinNhânViên.Text = "Thông Tin Nhân Viên";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rbtnTheoMa);
-            this.panel2.Controls.Add(this.rbtnTheoTen);
-            this.panel2.Location = new System.Drawing.Point(217, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 61);
-            this.panel2.TabIndex = 60;
-            // 
-            // rbtnTheoMa
-            // 
-            this.rbtnTheoMa.AutoSize = true;
-            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
-            this.rbtnTheoMa.Name = "rbtnTheoMa";
-            this.rbtnTheoMa.Size = new System.Drawing.Size(98, 23);
-            this.rbtnTheoMa.TabIndex = 1;
-            this.rbtnTheoMa.TabStop = true;
-            this.rbtnTheoMa.Text = "Theo Mã:";
-            this.rbtnTheoMa.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTheoTen
-            // 
-            this.rbtnTheoTen.AutoSize = true;
-            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
-            this.rbtnTheoTen.Name = "rbtnTheoTen";
-            this.rbtnTheoTen.Size = new System.Drawing.Size(103, 23);
-            this.rbtnTheoTen.TabIndex = 0;
-            this.rbtnTheoTen.TabStop = true;
-            this.rbtnTheoTen.Text = "Theo Tên:";
-            this.rbtnTheoTen.UseVisualStyleBackColor = true;
-            // 
-            // txbTimKiem
-            // 
-            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
-            this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
-            this.txbTimKiem.TabIndex = 59;
-            // 
-            // btnTimKiemNV
-            // 
-            this.btnTimKiemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnTimKiemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemNV.Location = new System.Drawing.Point(532, 30);
-            this.btnTimKiemNV.Name = "btnTimKiemNV";
-            this.btnTimKiemNV.Size = new System.Drawing.Size(89, 33);
-            this.btnTimKiemNV.TabIndex = 58;
-            this.btnTimKiemNV.Text = "Tìm kiếm";
-            this.btnTimKiemNV.UseVisualStyleBackColor = false;
-            // 
-            // btnXemNV
-            // 
-            this.btnXemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemNV.Location = new System.Drawing.Point(231, 215);
-            this.btnXemNV.Name = "btnXemNV";
-            this.btnXemNV.Size = new System.Drawing.Size(75, 33);
-            this.btnXemNV.TabIndex = 64;
-            this.btnXemNV.Text = "Xem";
-            this.btnXemNV.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaNV
-            // 
-            this.btnXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaNV.Location = new System.Drawing.Point(531, 215);
-            this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(75, 33);
-            this.btnXoaNV.TabIndex = 63;
-            this.btnXoaNV.Text = "Xóa";
-            this.btnXoaNV.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaNV
-            // 
-            this.btnSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaNV.Location = new System.Drawing.Point(431, 215);
-            this.btnSuaNV.Name = "btnSuaNV";
-            this.btnSuaNV.Size = new System.Drawing.Size(75, 33);
-            this.btnSuaNV.TabIndex = 62;
-            this.btnSuaNV.Text = "Sửa";
-            this.btnSuaNV.UseVisualStyleBackColor = false;
-            // 
-            // btnThemNV
-            // 
-            this.btnThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNV.Location = new System.Drawing.Point(331, 215);
-            this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(75, 33);
-            this.btnThemNV.TabIndex = 61;
-            this.btnThemNV.Text = "Thêm";
-            this.btnThemNV.UseVisualStyleBackColor = false;
-            // 
             // fQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -417,12 +422,12 @@
             this.Text = "Nhân Viên";
             this.gbQuanLyNhanVien.ResumeLayout(false);
             this.gbQuanLyNhanVien.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();
             this.grbGioiTinh_NV.ResumeLayout(false);
             this.grbGioiTinh_NV.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
