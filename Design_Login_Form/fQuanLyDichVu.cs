@@ -145,7 +145,7 @@ namespace Design_Login_Form
                     if (rbtnTheoTen.Checked == true)
                     {
                         string query = string.Format("exec TimKiemDV_Ten N'{0}'", txbTimKiem.Text);
-                        dvlist.DataSource = DataProvider.Instance.ExecuteQuery(query);
+                        dtgvThongTinDichVu.DataSource = DataProvider.Instance.ExecuteQuery(query);
                         int count = dtgvThongTinDichVu.Rows.Count - 1;
                         fm.message = "Tìm thấy " + count + " kết quả";
                         fm.ShowDialog();
@@ -153,7 +153,7 @@ namespace Design_Login_Form
                     else if (rbtnTheoMa.Checked == true)
                     {
                         string query = string.Format("exec TimKiemDV_Ma N'{0}'", txbTimKiem.Text);
-                        dvlist.DataSource = DataProvider.Instance.ExecuteQuery(query);
+                        dtgvThongTinDichVu.DataSource = DataProvider.Instance.ExecuteQuery(query);
                         int count = dtgvThongTinDichVu.Rows.Count - 1;
                         fm.message = "Tìm thấy " + count + " kết quả";
                         fm.ShowDialog();
