@@ -16,7 +16,7 @@ namespace Design_Login_Form
 {
     public partial class fQuanLyNhanVien : Form
     {
-        string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
+        string constr = ConnectionString.str;
         //string contr = ConnectionString.str; ghép chương trình làm ơn uncomment cái này
         public fQuanLyNhanVien()
         {

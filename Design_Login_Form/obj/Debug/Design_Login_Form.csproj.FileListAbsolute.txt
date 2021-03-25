@@ -137,3 +137,28 @@ C:\GITHUB\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.e
 C:\GITHUB\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.pdb
 C:\GITHUB\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\FontAwesome.Sharp.dll
 C:\GITHUB\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.CopyComplete
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.exe.config
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.exe
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\Design_Login_Form.pdb
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csprojAssemblyReference.cache
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fBaoCaoDoanhThu.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fDoiMatKhau.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fLogin.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fMessageBox.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyDichVu.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyKhuVuiChoi.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyLoaiDichVu.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyNhanVien.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyTroChoi.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fQuanLyVeBan.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fTableManager.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongKeLuong.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinHoaDon.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.fThongTinTaiKhoan.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.Properties.Resources.resources
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.GenerateResource.cache
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.CoreCompileInputs.cache
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.csproj.CopyComplete
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.exe
+C:\Users\huyho\OneDrive\Desktop\New folder\testgiaodienkhuvuichoi\Design_Login_Form\obj\Debug\Design_Login_Form.pdb

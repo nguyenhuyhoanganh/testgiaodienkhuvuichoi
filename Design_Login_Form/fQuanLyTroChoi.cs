@@ -18,7 +18,7 @@ namespace Design_Login_Form
             InitializeComponent();
         }
 
-        string constr = @"Data Source=DESKTOP-7HIL2OS\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
+        string constr = ConnectionString.str;
 
         private void btnXemTroChoi_Click(object sender, EventArgs e)
         {

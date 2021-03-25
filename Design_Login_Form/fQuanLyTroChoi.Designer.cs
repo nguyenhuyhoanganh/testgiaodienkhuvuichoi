@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.gbQuanLyTroChoi = new System.Windows.Forms.GroupBox();
+            this.btnXemTroChoi = new System.Windows.Forms.Button();
+            this.btnXoaTroChoi = new System.Windows.Forms.Button();
+            this.btnSuaTroChoi = new System.Windows.Forms.Button();
+            this.btnThemTroChoi = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
+            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiemTroChoi = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -38,19 +47,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvThongTinTroChoi = new System.Windows.Forms.DataGridView();
             this.labelThôngTinTròChơi = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnTheoMa = new System.Windows.Forms.RadioButton();
-            this.rbtnTheoTen = new System.Windows.Forms.RadioButton();
-            this.txbTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiemTroChoi = new System.Windows.Forms.Button();
-            this.btnXemTroChoi = new System.Windows.Forms.Button();
-            this.btnXoaTroChoi = new System.Windows.Forms.Button();
-            this.btnSuaTroChoi = new System.Windows.Forms.Button();
-            this.btnThemTroChoi = new System.Windows.Forms.Button();
             this.gbQuanLyTroChoi.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinTroChoi)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbQuanLyTroChoi
@@ -77,6 +77,104 @@
             this.gbQuanLyTroChoi.TabIndex = 1;
             this.gbQuanLyTroChoi.TabStop = false;
             this.gbQuanLyTroChoi.Text = "Quản Lý Trò Chơi";
+            // 
+            // btnXemTroChoi
+            // 
+            this.btnXemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemTroChoi.Location = new System.Drawing.Point(231, 215);
+            this.btnXemTroChoi.Name = "btnXemTroChoi";
+            this.btnXemTroChoi.Size = new System.Drawing.Size(75, 33);
+            this.btnXemTroChoi.TabIndex = 70;
+            this.btnXemTroChoi.Text = "Xem";
+            this.btnXemTroChoi.UseVisualStyleBackColor = false;
+            this.btnXemTroChoi.Click += new System.EventHandler(this.btnXemTroChoi_Click);
+            // 
+            // btnXoaTroChoi
+            // 
+            this.btnXoaTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnXoaTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaTroChoi.Location = new System.Drawing.Point(531, 215);
+            this.btnXoaTroChoi.Name = "btnXoaTroChoi";
+            this.btnXoaTroChoi.Size = new System.Drawing.Size(75, 33);
+            this.btnXoaTroChoi.TabIndex = 69;
+            this.btnXoaTroChoi.Text = "Xóa";
+            this.btnXoaTroChoi.UseVisualStyleBackColor = false;
+            this.btnXoaTroChoi.Click += new System.EventHandler(this.btnXoaTroChoi_Click);
+            // 
+            // btnSuaTroChoi
+            // 
+            this.btnSuaTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnSuaTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaTroChoi.Location = new System.Drawing.Point(431, 215);
+            this.btnSuaTroChoi.Name = "btnSuaTroChoi";
+            this.btnSuaTroChoi.Size = new System.Drawing.Size(75, 33);
+            this.btnSuaTroChoi.TabIndex = 68;
+            this.btnSuaTroChoi.Text = "Sửa";
+            this.btnSuaTroChoi.UseVisualStyleBackColor = false;
+            this.btnSuaTroChoi.Click += new System.EventHandler(this.btnSuaTroChoi_Click);
+            // 
+            // btnThemTroChoi
+            // 
+            this.btnThemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnThemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemTroChoi.Location = new System.Drawing.Point(331, 215);
+            this.btnThemTroChoi.Name = "btnThemTroChoi";
+            this.btnThemTroChoi.Size = new System.Drawing.Size(75, 33);
+            this.btnThemTroChoi.TabIndex = 67;
+            this.btnThemTroChoi.Text = "Thêm";
+            this.btnThemTroChoi.UseVisualStyleBackColor = false;
+            this.btnThemTroChoi.Click += new System.EventHandler(this.btnThemTroChoi_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rbtnTheoMa);
+            this.panel2.Controls.Add(this.rbtnTheoTen);
+            this.panel2.Location = new System.Drawing.Point(217, 17);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(107, 61);
+            this.panel2.TabIndex = 66;
+            // 
+            // rbtnTheoMa
+            // 
+            this.rbtnTheoMa.AutoSize = true;
+            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
+            this.rbtnTheoMa.Name = "rbtnTheoMa";
+            this.rbtnTheoMa.Size = new System.Drawing.Size(98, 23);
+            this.rbtnTheoMa.TabIndex = 1;
+            this.rbtnTheoMa.TabStop = true;
+            this.rbtnTheoMa.Text = "Theo Mã:";
+            this.rbtnTheoMa.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTheoTen
+            // 
+            this.rbtnTheoTen.AutoSize = true;
+            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
+            this.rbtnTheoTen.Name = "rbtnTheoTen";
+            this.rbtnTheoTen.Size = new System.Drawing.Size(103, 23);
+            this.rbtnTheoTen.TabIndex = 0;
+            this.rbtnTheoTen.TabStop = true;
+            this.rbtnTheoTen.Text = "Theo Tên:";
+            this.rbtnTheoTen.UseVisualStyleBackColor = true;
+            // 
+            // txbTimKiem
+            // 
+            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
+            this.txbTimKiem.TabIndex = 65;
+            // 
+            // btnTimKiemTroChoi
+            // 
+            this.btnTimKiemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.btnTimKiemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemTroChoi.Location = new System.Drawing.Point(532, 30);
+            this.btnTimKiemTroChoi.Name = "btnTimKiemTroChoi";
+            this.btnTimKiemTroChoi.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemTroChoi.TabIndex = 64;
+            this.btnTimKiemTroChoi.Text = "Tìm kiếm";
+            this.btnTimKiemTroChoi.UseVisualStyleBackColor = false;
+            this.btnTimKiemTroChoi.Click += new System.EventHandler(this.btnTimKiemTroChoi_Click);
             // 
             // label27
             // 
@@ -147,6 +245,7 @@
             this.dtgvThongTinTroChoi.RowTemplate.Height = 24;
             this.dtgvThongTinTroChoi.Size = new System.Drawing.Size(812, 300);
             this.dtgvThongTinTroChoi.TabIndex = 35;
+            this.dtgvThongTinTroChoi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick);
             // 
             // labelThôngTinTròChơi
             // 
@@ -156,99 +255,6 @@
             this.labelThôngTinTròChơi.Size = new System.Drawing.Size(149, 19);
             this.labelThôngTinTròChơi.TabIndex = 1;
             this.labelThôngTinTròChơi.Text = "Thông Tin Trò Chơi";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rbtnTheoMa);
-            this.panel2.Controls.Add(this.rbtnTheoTen);
-            this.panel2.Location = new System.Drawing.Point(217, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 61);
-            this.panel2.TabIndex = 66;
-            // 
-            // rbtnTheoMa
-            // 
-            this.rbtnTheoMa.AutoSize = true;
-            this.rbtnTheoMa.Location = new System.Drawing.Point(3, 32);
-            this.rbtnTheoMa.Name = "rbtnTheoMa";
-            this.rbtnTheoMa.Size = new System.Drawing.Size(98, 23);
-            this.rbtnTheoMa.TabIndex = 1;
-            this.rbtnTheoMa.TabStop = true;
-            this.rbtnTheoMa.Text = "Theo Mã:";
-            this.rbtnTheoMa.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTheoTen
-            // 
-            this.rbtnTheoTen.AutoSize = true;
-            this.rbtnTheoTen.Location = new System.Drawing.Point(3, 3);
-            this.rbtnTheoTen.Name = "rbtnTheoTen";
-            this.rbtnTheoTen.Size = new System.Drawing.Size(103, 23);
-            this.rbtnTheoTen.TabIndex = 0;
-            this.rbtnTheoTen.TabStop = true;
-            this.rbtnTheoTen.Text = "Theo Tên:";
-            this.rbtnTheoTen.UseVisualStyleBackColor = true;
-            // 
-            // txbTimKiem
-            // 
-            this.txbTimKiem.Location = new System.Drawing.Point(330, 32);
-            this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(196, 27);
-            this.txbTimKiem.TabIndex = 65;
-            // 
-            // btnTimKiemTroChoi
-            // 
-            this.btnTimKiemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnTimKiemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemTroChoi.Location = new System.Drawing.Point(532, 30);
-            this.btnTimKiemTroChoi.Name = "btnTimKiemTroChoi";
-            this.btnTimKiemTroChoi.Size = new System.Drawing.Size(89, 33);
-            this.btnTimKiemTroChoi.TabIndex = 64;
-            this.btnTimKiemTroChoi.Text = "Tìm kiếm";
-            this.btnTimKiemTroChoi.UseVisualStyleBackColor = false;
-            // 
-            // btnXemTroChoi
-            // 
-            this.btnXemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemTroChoi.Location = new System.Drawing.Point(231, 215);
-            this.btnXemTroChoi.Name = "btnXemTroChoi";
-            this.btnXemTroChoi.Size = new System.Drawing.Size(75, 33);
-            this.btnXemTroChoi.TabIndex = 70;
-            this.btnXemTroChoi.Text = "Xem";
-            this.btnXemTroChoi.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaTroChoi
-            // 
-            this.btnXoaTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnXoaTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTroChoi.Location = new System.Drawing.Point(531, 215);
-            this.btnXoaTroChoi.Name = "btnXoaTroChoi";
-            this.btnXoaTroChoi.Size = new System.Drawing.Size(75, 33);
-            this.btnXoaTroChoi.TabIndex = 69;
-            this.btnXoaTroChoi.Text = "Xóa";
-            this.btnXoaTroChoi.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaTroChoi
-            // 
-            this.btnSuaTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnSuaTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaTroChoi.Location = new System.Drawing.Point(431, 215);
-            this.btnSuaTroChoi.Name = "btnSuaTroChoi";
-            this.btnSuaTroChoi.Size = new System.Drawing.Size(75, 33);
-            this.btnSuaTroChoi.TabIndex = 68;
-            this.btnSuaTroChoi.Text = "Sửa";
-            this.btnSuaTroChoi.UseVisualStyleBackColor = false;
-            // 
-            // btnThemTroChoi
-            // 
-            this.btnThemTroChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.btnThemTroChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemTroChoi.Location = new System.Drawing.Point(331, 215);
-            this.btnThemTroChoi.Name = "btnThemTroChoi";
-            this.btnThemTroChoi.Size = new System.Drawing.Size(75, 33);
-            this.btnThemTroChoi.TabIndex = 67;
-            this.btnThemTroChoi.Text = "Thêm";
-            this.btnThemTroChoi.UseVisualStyleBackColor = false;
             // 
             // fQuanLyTroChoi
             // 
@@ -264,10 +270,10 @@
             this.Text = "Trò Chơi";
             this.gbQuanLyTroChoi.ResumeLayout(false);
             this.gbQuanLyTroChoi.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinTroChoi)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinTroChoi)).EndInit();
             this.ResumeLayout(false);
 
         }
