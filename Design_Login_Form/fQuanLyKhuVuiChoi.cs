@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,20 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Design_Login_Form.DAO;
 
 namespace Design_Login_Form
 {
     public partial class fQuanLyKhuVuiChoi : Form
     {
-        static String connString = ConnectionString.str;
+        static String connString = @"Data Source=DESKTOP-VAFF7B0\SQLEXPRESS;Initial Catalog=KHUVUICHOIGIAITRI;Integrated Security=True";
         SqlConnection conn = new SqlConnection(connString);
         public fQuanLyKhuVuiChoi()
         {
             InitializeComponent();
         }
         
-        private void btnXemKhu_Click(object sender, EventArgs e)
+        private void btnXemKhu_Click_1(object sender, EventArgs e)
         {
             try
             {   
@@ -38,7 +37,7 @@ namespace Design_Login_Form
         }
         public void Sqlxem()
         {
-            string SqlSELECT = "SELECT MAKHU as N'Mã khu',TENKHU as N'Tên khu',GIAVENL as N'Giá vé người lớn',GIAVETE as N'Giá vé trẻ em',DIADIEM as N'Địa điểm' FROM KHUVUICHOI";
+            string SqlSELECT = "SELECT MAKHU as N'Mã khu',TENKHU as N'Tên khu',GIAVENL as N'Giá vé người lớn',GIAVETE as N'Giá vé trẻ em' FROM KHUVUICHOI";
             SqlCommand cmd = new SqlCommand(SqlSELECT, conn);
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -46,7 +45,7 @@ namespace Design_Login_Form
             dtgvKhu.DataSource = dt;
         }
 
-        private void btnThemKhu_Click(object sender, EventArgs e)
+        private void btnThemKhu_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -61,14 +60,14 @@ namespace Design_Login_Form
                 cmd.ExecuteNonQuery();
                 if(conn.State==ConnectionState.Open)
                 conn.Close();
-                btnXemKhu_Click(sender, e);
+                btnXemKhu_Click_1(sender, e);
             }
             catch (Exception e1)
             {
                 MessageBox.Show(e1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void dtgvKhu_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgvKhu_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtgvKhu.CurrentRow.Index;
             txbMaKhu.Text = dtgvKhu.Rows[i].Cells[0].Value.ToString();
@@ -99,7 +98,7 @@ namespace Design_Login_Form
                 cmd.ExecuteNonQuery();
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
-                btnXemKhu_Click(sender, e);
+                btnXemKhu_Click_1(sender, e);
                 XoaTextbox();
             }
             catch (Exception e1)
@@ -118,7 +117,7 @@ namespace Design_Login_Form
                 cmd.ExecuteNonQuery();
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
-                btnXemKhu_Click(sender, e);
+                btnXemKhu_Click_1(sender, e);
                 XoaTextbox();
             }
             catch (Exception e1)
@@ -135,8 +134,8 @@ namespace Design_Login_Form
                     conn.Open();
                 if (rbtnTheoTen.Checked == true)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT MAKHU as N'Mã khu',TENKHU as N'Tên khu',GIAVENL as N'Giá vé người lớn',GIAVETE as N'Giá vé trẻ em',DIADIEM as N'Địa điểm' FROM KHUVUICHOI where TENKHU=@TENKHU", conn);
-                    cmd.Parameters.AddWithValue("@TENKHU", txbTenKhuVuiChoi.Text);
+                    SqlCommand cmd = new SqlCommand("execute timkiemtenKVC N'" + txbTimKiem.Text + "'", conn);
+                    cmd.Parameters.AddWithValue("@search", txbTimKiem.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
                     dt.Load(dr);
@@ -145,8 +144,8 @@ namespace Design_Login_Form
                 }
                 if (rbtnTheoMa.Checked == true)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT MAKHU as N'Mã khu',TENKHU as N'Tên khu',GIAVENL as N'Giá vé người lớn',GIAVETE as N'Giá vé trẻ em',DIADIEM as N'Địa điểm' FROM KHUVUICHOI where MAKHU=@MAKHU", conn);
-                    cmd.Parameters.AddWithValue("@MAKHU", txbMaKhu.Text);
+                    SqlCommand cmd = new SqlCommand("execute timkiemmaKVC N'" + txbTimKiem.Text + "'", conn);
+                    cmd.Parameters.AddWithValue("@search", txbTimKiem.Text);
                     SqlDataReader dr = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
                     dt.Load(dr);
@@ -160,6 +159,11 @@ namespace Design_Login_Form
                 MessageBox.Show(e1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
+    }
 
     }
