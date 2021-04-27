@@ -359,13 +359,13 @@ go
 
 -- themKHUVUICHOI: Thêm khu vui chơi 
 
-create or alter proc themKHUVUICHOI(@makhu nchar(10),@tenkhu nvarchar(50),@giavenl money,@giavete money,@diadiem nvarchar(50)) 
+create or alter proc themKHUVUICHOI(@makhu nchar(10),@tenkhu nvarchar(50),@giavenl money,@giavete money) 
 
  as begin 
 
- insert into dbo.KHUVUICHOI(MAKHU, TENKHU, GIAVENL, GIAVETE, DIADIEM) 
+ insert into dbo.KHUVUICHOI(MAKHU, TENKHU, GIAVENL, GIAVETE) 
 
- values(@makhu,@tenkhu,@giavenl,@giavete,@diadiem) 
+ values(@makhu,@tenkhu,@giavenl,@giavete) 
 
  end 
 
